@@ -696,10 +696,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ColorVector:
-  - {r: 0.25490198, g: 0.23529413, b: 0.4666667, a: 0}
-  - {r: 0.9215687, g: 0.8117648, b: 0.57254905, a: 0}
-  - {r: 0.8862746, g: 0.6509804, b: 0.37647063, a: 0}
-  - {r: 0.654902, g: 0.7490196, b: 0.89019614, a: 0}
+  - {r: 0.25490198, g: 0.23529413, b: 0.4666667, a: 1}
+  - {r: 0.9215687, g: 0.8117648, b: 0.57254905, a: 1}
+  - {r: 0.8862746, g: 0.6509804, b: 0.37647063, a: 1}
+  - {r: 0.654902, g: 0.7490196, b: 0.89019614, a: 1}
 --- !u!4 &1252446906
 Transform:
   m_ObjectHideFlags: 0
@@ -1353,9 +1353,29 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 3154382472083217704, guid: a9b90ec04a19ac4439ecc680a6743f81, type: 3}
+      propertyPath: MyColorType
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3154382472083217704, guid: a9b90ec04a19ac4439ecc680a6743f81, type: 3}
       propertyPath: OtherPlayer
       value: 
       objectReference: {fileID: 6315003282884578151}
+    - target: {fileID: 6131238520060759313, guid: a9b90ec04a19ac4439ecc680a6743f81, type: 3}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6131238520060759313, guid: a9b90ec04a19ac4439ecc680a6743f81, type: 3}
+      propertyPath: m_Color.b
+      value: 0.46666667
+      objectReference: {fileID: 0}
+    - target: {fileID: 6131238520060759313, guid: a9b90ec04a19ac4439ecc680a6743f81, type: 3}
+      propertyPath: m_Color.g
+      value: 0.23529412
+      objectReference: {fileID: 0}
+    - target: {fileID: 6131238520060759313, guid: a9b90ec04a19ac4439ecc680a6743f81, type: 3}
+      propertyPath: m_Color.r
+      value: 0.25490198
+      objectReference: {fileID: 0}
     - target: {fileID: 6131238520060759314, guid: a9b90ec04a19ac4439ecc680a6743f81, type: 3}
       propertyPath: m_Name
       value: PlayerA
@@ -1438,11 +1458,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8177822102382727020, guid: ac34cc7f46800e5448cee77659bc6e39, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -5.36
+      value: -4.85
       objectReference: {fileID: 0}
     - target: {fileID: 8177822102382727020, guid: ac34cc7f46800e5448cee77659bc6e39, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.8799999
+      value: 0.85
       objectReference: {fileID: 0}
     - target: {fileID: 8177822102382727020, guid: ac34cc7f46800e5448cee77659bc6e39, type: 3}
       propertyPath: m_LocalPosition.z

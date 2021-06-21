@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
@@ -263,7 +261,7 @@ public class PlayerController : MonoBehaviour
         GetComponent<SpriteRenderer>().color = MyColor.Color;
         this.gameObject.layer = LayerMask.NameToLayer(MyColor.Name);
 
-        //Debug.Log(this.gameObject.name + " changed to Color " + MyColor.Name);
+        Debug.Log(this.gameObject.name + " changed to Color " + MyColor.Name);
 
         if(OtherPlayer.MyColorType != ColorMaster.Instance.GetRespectiveColor(MyColorType))
             OtherPlayer.ChangeColor(ColorMaster.Instance.GetRespectiveColor(MyColorType));

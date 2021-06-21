@@ -138,7 +138,7 @@ MonoBehaviour:
   Interacting: 0
   Active: 0
   OtherPlayer: {fileID: 0}
-  MyColorType: 1
+  MyColorType: 2
   Speed: 800
   MaxVelocityX: 6
   JumpForce: 750
