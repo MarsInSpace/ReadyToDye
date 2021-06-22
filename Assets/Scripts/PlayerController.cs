@@ -157,15 +157,10 @@ public class PlayerController : MonoBehaviour
 
 
         if (Grounded)
-        {
-            //Apply force at ca 64° down to deny player the ability to climb slopes
-            MyRB.AddForce(new Vector2(xForce, -Mathf.Abs(xForce * 1.5f)));
-        }
+            MyRB.AddForce(new Vector2(xForce, 0));
         else
-        {
             //move horizontally at lower speed when in the air
             MyRB.AddForce(new Vector2((xForce) / 5, 0));
-        }
 
         //Debug.Log("detected Input " + xInput);
         //Debug.Log("added Force " + xForce);
@@ -178,65 +173,8 @@ public class PlayerController : MonoBehaviour
     private void Jump()
     {
         if (Grounded && Input.GetKey(KeyCode.Space) && !SpaceKeyDown)
-        {
-            Collider2D[] collisions = Physics2D.OverlapBoxAll(transform.position - new Vector3(0, 0.05f + transform.localScale.y / 2, 0), new Vector3(transform.localScale.x - 0.2f, 0.055f, 0), 0, OnGroundLayer);
-
-            float gradient = 0;
-
-            foreach (Collider2D collider in collisions)
-            {
-                //Debug.Log("Colliding with: " + collider.gameObject.name);
-
-                // ignore own collider
-                if (collider.gameObject == this.gameObject)
-                {
-                    continue;
-                }
-                else if (collider.tag.Equals("Edge"))
-                {
-                    //gradient = Mathf.Tan(collider.GetComponent<PlatformEffector2D>().rotationalOffset * Mathf.Deg2Rad);
-                    //Vector2 gradientTranslation = new Vector2((-gradient / 9f) * 16, (1f / 16f) * 9);
-
-                    //Debug.Log("Gradient: " + gradient);
-                    //Debug.Log("GradientTranslation: " + gradientTranslation.y/gradientTranslation.x);
-                    //Debug.Log("GradientTranslation (inverse): " + gradientTranslation.x/gradientTranslation.y);
-
-                    
-                    Vector2[] points = collider.GetComponent<EdgeCollider2D>().points;
-
-                    if (points.Length > 2)
-                        Debug.LogError("to many points on collider " + collider.name);
-
-                    Vector2 delta = collider.transform.TransformPoint(points[0]) - collider.transform.TransformPoint(points[1]);
-
-                    if (delta.x < 0)
-                        delta *= -1;
-
-                    gradient = delta.y / delta.x;
-
-                    Debug.Log("grd: " + delta.y/delta.x);
-
-                    break;
-                }
-            }
-
-
-            Vector2 ForceDirection;
-
-            if (gradient != 0)
-            {
-                ForceDirection = new Vector2(1, -1 / gradient).normalized;
-
-                if (ForceDirection.y < 0)
-                    ForceDirection *= -1;
-            }
-            else
-                ForceDirection = Vector2.up;
-
-            Debug.Log("ForceDirection: " + ForceDirection);
-
-
-            MyRB.AddForce(ForceDirection * JumpForce, ForceMode2D.Impulse);
+        {            
+            MyRB.AddForce(Vector2.up * JumpForce, ForceMode2D.Impulse);
             SpaceKeyDown = true;
 
             //Debug.Log("Jumped");
@@ -261,7 +199,7 @@ public class PlayerController : MonoBehaviour
         GetComponent<SpriteRenderer>().color = MyColor.Color;
         this.gameObject.layer = LayerMask.NameToLayer(MyColor.Name);
 
-        Debug.Log(this.gameObject.name + " changed to Color " + MyColor.Name);
+        //Debug.Log(this.gameObject.name + " changed to Color " + MyColor.Name);
 
         if(OtherPlayer.MyColorType != ColorMaster.Instance.GetRespectiveColor(MyColorType))
             OtherPlayer.ChangeColor(ColorMaster.Instance.GetRespectiveColor(MyColorType));
