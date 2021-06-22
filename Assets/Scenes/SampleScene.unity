@@ -1337,6 +1337,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2901a19adf418f64fb6f32fda80bf4b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  CanTurn: 1
 --- !u!1 &1364050740
 GameObject:
   m_ObjectHideFlags: 0
@@ -1536,6 +1537,71 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   FieldColor: 2
+--- !u!1001 &1521739993
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5232140959990000797, guid: a4b51283f411b3442ad3c8d3da8a1064, type: 3}
+      propertyPath: m_Name
+      value: WorldTurn (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5232140959990000865, guid: a4b51283f411b3442ad3c8d3da8a1064, type: 3}
+      propertyPath: MainCam
+      value: 
+      objectReference: {fileID: 519420031}
+    - target: {fileID: 5232140959990000865, guid: a4b51283f411b3442ad3c8d3da8a1064, type: 3}
+      propertyPath: RotationSpeed
+      value: 0.03
+      objectReference: {fileID: 0}
+    - target: {fileID: 5232140959990000867, guid: a4b51283f411b3442ad3c8d3da8a1064, type: 3}
+      propertyPath: m_RootOrder
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 5232140959990000867, guid: a4b51283f411b3442ad3c8d3da8a1064, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 3.53
+      objectReference: {fileID: 0}
+    - target: {fileID: 5232140959990000867, guid: a4b51283f411b3442ad3c8d3da8a1064, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.35
+      objectReference: {fileID: 0}
+    - target: {fileID: 5232140959990000867, guid: a4b51283f411b3442ad3c8d3da8a1064, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5232140959990000867, guid: a4b51283f411b3442ad3c8d3da8a1064, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5232140959990000867, guid: a4b51283f411b3442ad3c8d3da8a1064, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5232140959990000867, guid: a4b51283f411b3442ad3c8d3da8a1064, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5232140959990000867, guid: a4b51283f411b3442ad3c8d3da8a1064, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5232140959990000867, guid: a4b51283f411b3442ad3c8d3da8a1064, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5232140959990000867, guid: a4b51283f411b3442ad3c8d3da8a1064, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5232140959990000867, guid: a4b51283f411b3442ad3c8d3da8a1064, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: a4b51283f411b3442ad3c8d3da8a1064, type: 3}
 --- !u!1 &1527612519
 GameObject:
   m_ObjectHideFlags: 0
@@ -2256,7 +2322,7 @@ EdgeCollider2D:
   m_Offset: {x: 0, y: 0}
   m_EdgeRadius: 0
   m_Points:
-  - {x: 1.71, y: 2.63}
+  - {x: 1.71, y: 2.57}
   - {x: 1.71, y: -2.66}
   m_AdjacentStartPoint: {x: 0, y: 0}
   m_AdjacentEndPoint: {x: 0, y: 0}
