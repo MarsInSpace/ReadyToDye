@@ -59,7 +59,7 @@ public class TurnWorld : MonoBehaviour
 
         
 
-        if (Mathf.Abs(MainCam.transform.rotation.eulerAngles.z - TargetRotation.eulerAngles.z) < 0.02f)
+        if (Mathf.Abs(MainCam.transform.rotation.eulerAngles.z - TargetRotation.eulerAngles.z) < 0.05f)
         {
             MainCam.transform.rotation = TargetRotation;
             Physics2D.gravity = TargetGravity;

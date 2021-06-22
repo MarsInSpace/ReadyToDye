@@ -15,8 +15,6 @@ public class OrientationMaster : MonoBehaviour
     }
 
 
-    //public float zRotatoin;
-
     public enum LevelOrientations
     {
         normal, 
@@ -60,27 +58,6 @@ public class OrientationMaster : MonoBehaviour
         }
     }
 
-    //public void TurnLevel(float angle)
-    //{
-    //    if (angle <= 180 && angle >= -180)
-    //    {
-    //        zRotatoin += angle;
-    //        zRotatoin = zRotatoin % 180;
-    //    }
-    //    else
-    //        Debug.Log("invalid angle passed");
-    //}
-
-    //public void SetLevelRotation(float angle)
-    //{
-    //    angle = angle % 360;
-
-    //    if (angle > 180 || angle < -180)
-    //        zRotatoin = (angle % 180) * -1;
-    //    else
-    //        zRotatoin = angle;
-    //}
-
 
     public float GetHorizontalAxisInput()
     {
@@ -123,7 +100,7 @@ public class OrientationMaster : MonoBehaviour
         return new Vector2(Up().x, -Up().y);
     }
 
-    public Vector2 translateVector(Vector2 original)
+    public Vector2 translateDirection(Vector2 original)
     {
         switch (LevelOrientation)
         {

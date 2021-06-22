@@ -225,10 +225,8 @@ public class PlayerController : MonoBehaviour
         Vector3 boxPosition = transform.position + new Vector3(boxPosOffset.x, boxPosOffset.y, 0);
 
         Vector3 boxScale = new Vector3(transform.localScale.x - 0.1f, 0.055f, 0);
-        Debug.Log("scale " + boxScale);
 
-        boxScale = OrientationMaster.Instance.translateVector(boxScale);
-        Debug.Log("scale new " + boxScale);
+        //TODO turn box when working with 90 degree level orientation
 
 
 
