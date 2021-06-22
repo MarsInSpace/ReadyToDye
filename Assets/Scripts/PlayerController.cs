@@ -219,7 +219,6 @@ public class PlayerController : MonoBehaviour
     void CheckGrounded()
     {
         //Debug.Log("CheckGrounded:");
-        Debug.Log("down " + OrientationMaster.Instance.Down());
 
         Vector2 boxPosOffset = OrientationMaster.Instance.Down() * (0.05f + transform.localScale.y / 2);
         Vector3 boxPosition = transform.position + new Vector3(boxPosOffset.x, boxPosOffset.y, 0);

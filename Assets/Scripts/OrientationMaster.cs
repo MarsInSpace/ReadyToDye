@@ -6,6 +6,8 @@ public class OrientationMaster : MonoBehaviour
 {
     public static OrientationMaster Instance;
 
+    public bool CanTurn = true;
+
     private void Awake()
     {
         if (OrientationMaster.Instance == null)
@@ -31,11 +33,12 @@ public class OrientationMaster : MonoBehaviour
         Debug.Log("new Orientation: " + LevelOrientation);
     }
 
-    public void UpdateLvlOrientation(float zAngle)
+    public void SetOrientationByAngle(float zAngle)
     {
+        Debug.Log("angle = " + zAngle);
         zAngle = zAngle % 360;
 
-        switch(zAngle)
+        switch(Mathf.RoundToInt(zAngle))
         {
             case 0:
                 LevelOrientation = LevelOrientations.normal;
@@ -78,8 +81,6 @@ public class OrientationMaster : MonoBehaviour
 
     public Vector2 Up()
     {
-        Debug.Log("returning up vector");
-
         switch (LevelOrientation)
         {
             case LevelOrientations.normal:
