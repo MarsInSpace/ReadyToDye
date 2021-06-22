@@ -138,7 +138,7 @@ public class PlayerController : MonoBehaviour
 
     private void Move()
     {
-        float xInput = Input.GetAxisRaw("Horizontal");
+        float xInput = OrientationMaster.Instance.GetHorizontalAxis();
 
         float accelleration;
 
@@ -174,7 +174,7 @@ public class PlayerController : MonoBehaviour
     {
         if (Grounded && Input.GetKey(KeyCode.Space) && !SpaceKeyDown)
         {            
-            MyRB.AddForce(Vector2.up * JumpForce, ForceMode2D.Impulse);
+            MyRB.AddForce(OrientationMaster.Instance.Up() * JumpForce, ForceMode2D.Impulse);
             SpaceKeyDown = true;
 
             //Debug.Log("Jumped");

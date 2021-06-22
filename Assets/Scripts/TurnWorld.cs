@@ -63,10 +63,21 @@ public class TurnWorld : MonoBehaviour
 
         
 
-        if (MainCam.transform.rotation == TargetRotation)
+        if (Mathf.Abs(MainCam.transform.rotation.eulerAngles.z - TargetRotation.eulerAngles.z) < 0.02f)
         {
+            MainCam.transform.rotation = TargetRotation;
+            Physics2D.gravity = TargetGravity;
+
+            Debug.Log("Done Turning");
+
             Turning = false;
             IsTurned = !IsTurned;
+
+            if (IsTurned)
+                OrientationMaster.Instance.SetLevelOrientation(OrientationMaster.LevelOrientations.half);
+            else
+                OrientationMaster.Instance.SetLevelOrientation(OrientationMaster.LevelOrientations.normal);
+
             TriggerCoolDown = 1;
         }
     }
