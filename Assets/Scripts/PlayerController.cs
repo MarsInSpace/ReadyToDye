@@ -138,7 +138,7 @@ public class PlayerController : MonoBehaviour
 
     private void Move()
     {
-        float xInput = OrientationMaster.Instance.GetHorizontalAxis();
+        float xInput = OrientationMaster.Instance.GetHorizontalAxisInput();
 
         float accelleration;
 
@@ -219,8 +219,20 @@ public class PlayerController : MonoBehaviour
     void CheckGrounded()
     {
         //Debug.Log("CheckGrounded:");
+        Debug.Log("down " + OrientationMaster.Instance.Down());
 
-        Collider2D[] collisions = Physics2D.OverlapBoxAll(transform.position - new Vector3(0, 0.05f + transform.localScale.y/2, 0), new Vector3(transform.localScale.x - 0.1f, 0.055f, 0), 0, OnGroundLayer);
+        Vector2 boxPosOffset = OrientationMaster.Instance.Down() * (0.05f + transform.localScale.y / 2);
+        Vector3 boxPosition = transform.position + new Vector3(boxPosOffset.x, boxPosOffset.y, 0);
+
+        Vector3 boxScale = new Vector3(transform.localScale.x - 0.1f, 0.055f, 0);
+        Debug.Log("scale " + boxScale);
+
+        boxScale = OrientationMaster.Instance.translateVector(boxScale);
+        Debug.Log("scale new " + boxScale);
+
+
+
+        Collider2D[] collisions = Physics2D.OverlapBoxAll(boxPosition, boxScale, 0, OnGroundLayer);
 
         bool GroundCheck = false;
 

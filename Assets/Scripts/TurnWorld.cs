@@ -19,10 +19,6 @@ public class TurnWorld : MonoBehaviour
     Vector2 TargetGravity;
 
     [SerializeField]
-    float CamSize;
-
-
-    [SerializeField]
     Camera MainCam;
 
 
@@ -81,7 +77,4 @@ public class TurnWorld : MonoBehaviour
             TriggerCoolDown = 1;
         }
     }
-
-
-
 }
