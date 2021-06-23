@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class ColorMaster : MonoBehaviour
 {
+    //Master to manage/provide any information related to color system
 
     public static ColorMaster Instance;
 
@@ -15,10 +16,16 @@ public class ColorMaster : MonoBehaviour
             Destroy(this.gameObject);
     }
 
+
+    //the colors used within the Level
     public Color[] ColorVector;
 
 
-
+    /// <summary>
+    /// returns the associated color of the color pair with the given color
+    /// </summary>
+    /// <param name="colorType">color to get the associated color for</param>
+    /// <returns></returns>
     public GameColorTypes GetRespectiveColor(GameColorTypes colorType)
     {
         switch (colorType)
@@ -71,7 +78,7 @@ public class GameColor
         get { return color; }
     }
 
-
+    //Constructor for GameColors
     public GameColor(GameColorTypes setType)
     {
         this.type = setType;

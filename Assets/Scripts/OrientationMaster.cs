@@ -6,8 +6,6 @@ public class OrientationMaster : MonoBehaviour
 {
     public static OrientationMaster Instance;
 
-    public bool CanTurn = true;
-
     private void Awake()
     {
         if (OrientationMaster.Instance == null)
@@ -17,15 +15,20 @@ public class OrientationMaster : MonoBehaviour
     }
 
 
+    //false when level orientation must not be changed
+    public bool CanTurn = true;
+
     public enum LevelOrientations
     {
-        normal, 
-        left, 
-        right, 
-        half
+        normal,     //0°
+        left,       //90°
+        right,      //-90°
+        half        //180°
     }
 
     LevelOrientations LevelOrientation = LevelOrientations.normal;
+
+
 
     public void SetLevelOrientation(LevelOrientations orientation)
     {
@@ -61,7 +64,10 @@ public class OrientationMaster : MonoBehaviour
         }
     }
 
-
+    /// <summary>
+    /// returns the horizontal input relative to the levelorientation
+    /// </summary>
+    /// <returns>a value between -1 and 1</returns>
     public float GetHorizontalAxisInput()
     {
         //Debug.Log("returning horizontal axis");
@@ -79,6 +85,10 @@ public class OrientationMaster : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// provides a vetor pointing up relative to the levelorientation
+    /// </summary>
+    /// <returns>a normalised vector pointing up</returns>
     public Vector2 Up()
     {
         switch (LevelOrientation)
@@ -96,11 +106,21 @@ public class OrientationMaster : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// provides a vetor pointing down relative to the levelorientation
+    /// </summary>
+    /// <returns>a normalised vector pointing down</returns>
     public Vector2 Down()
     {
         return new Vector2(Up().x, -Up().y);
     }
 
+
+    /// <summary>
+    /// translates a vector pointing in a direction relative to the level orientation
+    /// </summary>
+    /// <param name="original">direction vector to be translated</param>
+    /// <returns>the new direction vecot</returns>
     public Vector2 translateDirection(Vector2 original)
     {
         switch (LevelOrientation)
