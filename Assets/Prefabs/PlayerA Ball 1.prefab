@@ -73,9 +73,9 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 82287945
   m_SortingLayer: 2
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: -2413806693520163455, guid: 6bded925513dc5040957e264561b01e3, type: 3}
-  m_Color: {r: 0.654902, g: 0.7490196, b: 0.8901961, a: 1}
+  m_Color: {r: 0.25490198, g: 0.23529412, b: 0.46666667, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -138,13 +138,10 @@ MonoBehaviour:
   Interacting: 0
   Active: 1
   OtherPlayer: {fileID: 0}
-  MyColorType: 3
+  MyColorType: 0
   Speed: 800
   MaxVelocityX: 6
   JumpForce: 750
-  Level:
-    serializedVersion: 2
-    m_Bits: 1984
   OnGroundLayer:
     serializedVersion: 2
     m_Bits: 4032

@@ -4,9 +4,7 @@ using UnityEngine;
 
 public class TurnWorld : MonoBehaviour
 {
-    //bool IsTurned;                  //is true, when world has been turned
-
-    bool Turning;
+    bool Turning;                   //true when this instances turning is actived
 
     [SerializeField]
     float RotationSpeed;            //Speed at which the BG will be rotated
@@ -31,9 +29,6 @@ public class TurnWorld : MonoBehaviour
         if (!Turning && TriggerCoolDown > 0)
         {
             TriggerCoolDown -= Time.deltaTime;
-
-            if(TriggerCoolDown <= 0)
-                GetComponent<CircleCollider2D>().isTrigger = true;
         }
     }
 
@@ -52,7 +47,6 @@ public class TurnWorld : MonoBehaviour
 
         //Debug.Log("targetRotation = " + TargetRotation.eulerAngles);
 
-
         RotationTimer = 0;
         RotationSinceTurning = 0;
     }
@@ -70,7 +64,7 @@ public class TurnWorld : MonoBehaviour
         float rotationAngle = newRotationSinceTurning - RotationSinceTurning;
         RotationSinceTurning = newRotationSinceTurning;
 
-        Debug.Log("rotationAngle = " + rotationAngle);
+        //Debug.Log("rotationAngle = " + rotationAngle);
 
         //MainCam.transform.rotation = Quaternion.Lerp(MainCam.transform.rotation, TargetRotation, RotationSpeed);
         MainCam.transform.Rotate(0, 0, rotationAngle);
@@ -82,7 +76,7 @@ public class TurnWorld : MonoBehaviour
             MainCam.transform.rotation = TargetRotation;
             Physics2D.gravity = TargetGravity;
 
-            Debug.Log("Done Turning");
+            //Debug.Log("Done Turning");
 
             OrientationMaster.Instance.CanTurn = true;
             Turning = false;

@@ -27,7 +27,6 @@ public class Teleportation : MonoBehaviour
             collision.GetComponent<PlayerController>().Interacting = false;
             justTP = false;
         }
-        
     }
 
 }

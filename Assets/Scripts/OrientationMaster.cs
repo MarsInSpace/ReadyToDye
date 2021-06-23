@@ -38,7 +38,8 @@ public class OrientationMaster : MonoBehaviour
 
     public void SetOrientationByAngle(float zAngle)
     {
-        Debug.Log("angle = " + zAngle);
+        //Debug.Log("angle = " + zAngle);
+
         zAngle = zAngle % 360;
 
         switch(Mathf.RoundToInt(zAngle))
@@ -63,6 +64,8 @@ public class OrientationMaster : MonoBehaviour
                 break;
         }
     }
+
+
 
     /// <summary>
     /// returns the horizontal input relative to the levelorientation

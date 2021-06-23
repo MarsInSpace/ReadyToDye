@@ -4,24 +4,26 @@ public class PlayerController : MonoBehaviour
 {
     
 
-    Rigidbody2D MyRB;                               //
+    Rigidbody2D MyRB;                               //Rigidbody of the player
 
     [SerializeField]
-    bool Grounded;
+    bool Grounded;                                  //true when player on solid object
 
-    public bool Interacting;
+    public bool Interacting;                        //is true when player interacts with certain interactive objects in the scene (teleporter, world turn etc.)
 
 
     //---- Player Switch -----//
 
-    public bool Active;
-    float ActiveCoolDown;
-    float ActiveCoolDownTime = 0.2f;
+    public bool Active;                             //is true when player is active player
+    float ActiveCoolDown;                           // delay timer for repeated active switch
+    float ActiveCoolDownTime = 0.2f;                // delay time frame
 
     [SerializeField]
-    PlayerController OtherPlayer;
+    PlayerController OtherPlayer;                   // the second player
    
+
     //---- Color -----//
+
     [SerializeField]
     public GameColorTypes MyColorType;
     GameColor MyColor;
@@ -37,14 +39,14 @@ public class PlayerController : MonoBehaviour
     //---- Jump -----//
 
     [SerializeField]
-    float JumpForce;                                
-    bool SpaceKeyDown;
+    float JumpForce;                                //how high                             
+    bool SpaceKeyDown;                              //input key memory
 
 
     //---- Layer Masks -----//
 
-    [SerializeField]
-    LayerMask Level;                                //Layermask of all Layers the Player collides with when growing 
+    //[SerializeField]
+    //LayerMask Level;                                //Layermask of all Layers the Player collides with when growing 
     [SerializeField]
     LayerMask OnGroundLayer;                        //Layermask of all Objects the Player recongnises as Ground
 
@@ -62,8 +64,9 @@ public class PlayerController : MonoBehaviour
     private void Start()
     {
         MyRB = GetComponent<Rigidbody2D>();
+
         if (MyRB == null)
-            Debug.LogError("no Rigidbody on Player found in PlayerController1");
+            Debug.LogError("no Rigidbody on Player found in PlayerController");
 
         MyColor = new GameColor(MyColorType);
 
@@ -82,11 +85,6 @@ public class PlayerController : MonoBehaviour
             Move();
             Jump();
         }
-
-
-        //dont fall endlessly  - TODO take out
-        if (transform.position.y < -10)
-            transform.position = Vector3.zero;
     }
 
 
@@ -94,8 +92,6 @@ public class PlayerController : MonoBehaviour
 
 
     //------------------------------------------------------------------------- Player Switch ---------------------------------------------------------------------------------//
-
-
 
 
 
@@ -110,7 +106,7 @@ public class PlayerController : MonoBehaviour
         }
 
 
-        if (Active && Input.GetKey(KeyCode.Tab))
+        if (Input.GetKey(KeyCode.LeftShift))
         {
             //Debug.Log(this.name + " switched off");
             Active = false;
@@ -194,13 +190,19 @@ public class PlayerController : MonoBehaviour
 
     public void ChangeColor(GameColorTypes newColorType)
     {
+        //change local color memory
         MyColor = new GameColor(newColorType);
         MyColorType = newColorType;
+
+        //update sprite color
         GetComponent<SpriteRenderer>().color = MyColor.Color;
+
+        //update layer according to color
         this.gameObject.layer = LayerMask.NameToLayer(MyColor.Name);
 
         //Debug.Log(this.gameObject.name + " changed to Color " + MyColor.Name);
 
+        //update other player to associated color
         if(OtherPlayer.MyColorType != ColorMaster.Instance.GetRespectiveColor(MyColorType))
             OtherPlayer.ChangeColor(ColorMaster.Instance.GetRespectiveColor(MyColorType));
     }
@@ -220,9 +222,11 @@ public class PlayerController : MonoBehaviour
     {
         //Debug.Log("CheckGrounded:");
 
+        //where dose the box go?
         Vector2 boxPosOffset = OrientationMaster.Instance.Down() * (0.05f + transform.localScale.y / 2);
         Vector3 boxPosition = transform.position + new Vector3(boxPosOffset.x, boxPosOffset.y, 0);
 
+        //how big is the box?
         Vector3 boxScale = new Vector3(transform.localScale.x - 0.1f, 0.055f, 0);
 
         //TODO turn box when working with 90 degree level orientation
@@ -246,8 +250,8 @@ public class PlayerController : MonoBehaviour
             {
                 GroundCheck = true;
             }
-
         }
+
         Grounded = GroundCheck;
     }
 }

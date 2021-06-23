@@ -5,7 +5,6 @@ using UnityEngine;
 public class ColorMaster : MonoBehaviour
 {
     //Master to manage/provide any information related to color system
-
     public static ColorMaster Instance;
 
     private void Awake()
@@ -54,8 +53,6 @@ public enum GameColorTypes
 
 public class GameColor
 {
-    
-
     private string name; // field
     public string Name   // property
     {
