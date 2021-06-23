@@ -63,7 +63,10 @@ public class TurnWorld : MonoBehaviour
     {
         RotationTimer += Time.deltaTime;
 
-        float newRotationSinceTurning = 90 - 90 * Mathf.Cos(2 * Mathf.PI * RotationTimer * RotationSpeed);
+        float radiantFactor = Mathf.Cos(Mathf.PI * RotationTimer * RotationSpeed);
+        float newRotationSinceTurning = 180 - 180 * (radiantFactor * Mathf.Abs(radiantFactor));
+        //float newRotationSinceTurning = 90 - 90 * Mathf.Cos(2 * Mathf.PI * RotationTimer * RotationSpeed);
+
         float rotationAngle = newRotationSinceTurning - RotationSinceTurning;
         RotationSinceTurning = newRotationSinceTurning;
 
