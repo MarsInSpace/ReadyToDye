@@ -9,8 +9,10 @@ public class TurnWorld : MonoBehaviour
     bool Turning;
 
     [SerializeField]
-    float RotationSpeed;            //Speed at which the BG will be rotated    
+    float RotationSpeed;            //Speed at which the BG will be rotated
+    float RotationSinceTurning;
 
+    float RotationTimer;
     float TriggerCoolDown;          //serves as timer to avoid immediate reactivation of the world turn (TO BE CHANGED?)
 
     Quaternion TargetRotation;
@@ -47,14 +49,29 @@ public class TurnWorld : MonoBehaviour
 
         TargetRotation = Quaternion.Euler(0, 0, MainCam.transform.rotation.eulerAngles.z + 180);
         TargetGravity = Physics2D.gravity * -1;
+
+        //Debug.Log("targetRotation = " + TargetRotation.eulerAngles);
+
+
+        RotationTimer = 0;
+        RotationSinceTurning = 0;
     }
 
 
 
     void UpdateWorldTurn()
-    {  
-        MainCam.transform.rotation = Quaternion.Lerp(MainCam.transform.rotation, TargetRotation, RotationSpeed);
-        Physics2D.gravity = Vector2.Lerp(Physics2D.gravity, TargetGravity, RotationSpeed);
+    {
+        RotationTimer += Time.deltaTime;
+
+        float newRotationSinceTurning = 90 - 90 * Mathf.Cos(2 * Mathf.PI * RotationTimer * RotationSpeed);
+        float rotationAngle = newRotationSinceTurning - RotationSinceTurning;
+        RotationSinceTurning = newRotationSinceTurning;
+
+        Debug.Log("rotationAngle = " + rotationAngle);
+
+        //MainCam.transform.rotation = Quaternion.Lerp(MainCam.transform.rotation, TargetRotation, RotationSpeed);
+        MainCam.transform.Rotate(0, 0, rotationAngle);
+        Physics2D.gravity = Vector2.Lerp(Physics2D.gravity, TargetGravity, RotationSpeed * 0.1f);
 
 
         if (Mathf.Abs(MainCam.transform.rotation.eulerAngles.z - TargetRotation.eulerAngles.z) < 0.02f)
