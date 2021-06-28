@@ -44,12 +44,17 @@ public class TurnWorld : MonoBehaviour
     Vector3 oldSmallPos = new Vector3(-7.16f, -2.38f);
     Vector3 newBigPos = new Vector3(4.834f, 2.66f);
     Vector3 newSmallPos = new Vector3(0.313f, -2.38f);
+    
+    bool IsOriginalPositionTaken = false;
+    Vector3 OriginalOnePosition;
+    Vector3 OriginalTwoPosition;
 
     private void Start()
     {
         BigCollider = BigSquare.GetComponent<Collider2D>();
         SmallCollider = SmallSquare.GetComponent<Collider2D>();
     }
+
     private void FixedUpdate()
     {
         CheckSquarePosition(); 
@@ -152,25 +157,32 @@ public class TurnWorld : MonoBehaviour
         float moveDistanceBig = Mathf.Abs(newBigPos.x) - Mathf.Abs(oldBigPos.x);
         float moveDistanceSmall = Mathf.Abs(newSmallPos.x) - Mathf.Abs(oldSmallPos.x);
 
+        if (IsOriginalPositionTaken == false)
+        {
+            OriginalOnePosition = PlayerOne.transform.position;
+            OriginalTwoPosition = PlayerTwo.transform.position;
+            IsOriginalPositionTaken = true;
+        }
+
         if (PlayerOne.GetComponent<Collider2D>().Distance(BigCollider).distance <= 0.3)
         {
-            PlayerOne.transform.position = Vector3.Lerp(PlayerOne.transform.position, PlayerOne.transform.position + new Vector3((sign * moveDistanceBig), 0, 0), RotationSpeed * 0.3f);
+            PlayerOne.transform.position = Vector3.Lerp(PlayerOne.transform.position, OriginalOnePosition + new Vector3((sign * moveDistanceBig), 0, 0), RotationSpeed * 0.3f);
             Debug.Log("Player Lerped");
         }
 
         if (PlayerOne.GetComponent<Collider2D>().Distance(SmallCollider).distance <= 0.3)
         {
-            PlayerOne.transform.position = Vector3.Lerp(PlayerOne.transform.position, PlayerOne.transform.position + new Vector3((sign * moveDistanceSmall), 0, 0), RotationSpeed * 0.3f);
+            PlayerOne.transform.position = Vector3.Lerp(PlayerOne.transform.position, OriginalOnePosition + new Vector3((sign * moveDistanceSmall), 0, 0), RotationSpeed * 0.3f);
         }
 
         if (PlayerTwo.GetComponent<Collider2D>().Distance(BigCollider).distance <= 0.3)
         {
-            PlayerTwo.transform.position = Vector3.Lerp(PlayerTwo.transform.position, PlayerTwo.transform.position + new Vector3((sign * moveDistanceBig), 0, 0), RotationSpeed * 0.3f);
+            PlayerTwo.transform.position = Vector3.Lerp(PlayerTwo.transform.position, OriginalTwoPosition + new Vector3((sign * moveDistanceBig), 0, 0), RotationSpeed * 0.3f);
         }
 
         if (PlayerTwo.GetComponent<Collider2D>().Distance(SmallCollider).distance <= 0.3)
         {
-            PlayerTwo.transform.position = Vector3.Lerp(PlayerTwo.transform.position, PlayerTwo.transform.position + new Vector3((sign * moveDistanceSmall), 0, 0), RotationSpeed * 0.3f);
+            PlayerTwo.transform.position = Vector3.Lerp(PlayerTwo.transform.position, OriginalTwoPosition + new Vector3((sign * moveDistanceSmall), 0, 0), RotationSpeed * 0.3f);
         }
     }
 
@@ -191,6 +203,11 @@ public class TurnWorld : MonoBehaviour
             if(BigSquare.transform.position == newBigPos && SmallSquare.transform.position == newSmallPos)
             {
                 TurningSquares = false;
+                IsOriginalPositionTaken = false;
+                
+                BigBlue.transform.position = new Vector3(-1.69f, -2.36f, 0);
+                SmallBlue.transform.position = new Vector3(6.33f, 2.61f, 0);
+                
                 Debug.Log("Finished Lerping One");
             }
         }
@@ -203,12 +220,14 @@ public class TurnWorld : MonoBehaviour
 
             Debug.Log("PosOne is lerped to");
 
-            BigBlue.transform.position = new Vector3(-1.69f, -2.36f, 0);
-            SmallBlue.transform.position = new Vector3(6.33f, 2.61f, 0);
-
             if (BigSquare.transform.position == oldBigPos && SmallSquare.transform.position == oldSmallPos)
             {
                 TurningSquares = false;
+                IsOriginalPositionTaken = false;
+                
+                BigBlue.transform.position = new Vector3(-1.69f, -2.36f, 0);
+                SmallBlue.transform.position = new Vector3(6.33f, 2.61f, 0);
+
                 Debug.Log("Finished Lerping Two");
             }
         }
