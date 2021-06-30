@@ -19,6 +19,13 @@ public class TurnWorld : MonoBehaviour
     [SerializeField]
     Camera MainCam;
 
+    WorldTurnAnimation AnimationScript;
+
+
+    private void Start()
+    {
+        AnimationScript = GetComponent<WorldTurnAnimation>();
+    }
 
     private void FixedUpdate()
     {
@@ -51,6 +58,8 @@ public class TurnWorld : MonoBehaviour
 
         RotationTimer = 0;
         RotationSinceTurning = 0;
+
+        AnimationScript.TriggerAnimation();
     }
 
 

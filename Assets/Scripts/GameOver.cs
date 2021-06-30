@@ -14,7 +14,7 @@ public class GameOver : MonoBehaviour
 
         if (collision.gameObject.tag.Equals("Player") && collision.GetComponent<PlayerController>().MyColorType == this.gameObject.GetComponent<BGField>().FieldColor)
             {
-                Debug.Log("DeathCollision");
+                //.Log("DeathCollision");
 
                 timeCounter += Time.deltaTime;
 

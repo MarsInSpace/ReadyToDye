@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 5232140959990000866}
   - component: {fileID: 8280606690302542827}
   - component: {fileID: 5232140959990000865}
+  - component: {fileID: 937839769}
+  - component: {fileID: 937839768}
   m_Layer: 0
   m_Name: WorldTurn
   m_TagString: LevelObject
@@ -99,7 +101,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.69
+  m_Radius: 0.48
 --- !u!114 &5232140959990000865
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -112,7 +114,36 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67e35482d804aae4cad687b2a055b5c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BG: {fileID: 0}
-  OtherObjects: {fileID: 0}
-  RotationSpeed: 2
-  ScalingSpeed: 0.07
+  RotationSpeed: 0.2
+  MainCam: {fileID: 0}
+--- !u!95 &937839769
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5232140959990000797}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: a5875e2021158f0448192a7dae135e06, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &937839768
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5232140959990000797}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bdfaacac992632e4fb7dc46b30b3c4f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

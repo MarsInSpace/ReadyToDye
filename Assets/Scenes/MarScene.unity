@@ -1133,42 +1133,6 @@ EdgeCollider2D:
   m_AdjacentEndPoint: {x: 0, y: 0}
   m_UseAdjacentStartPoint: 0
   m_UseAdjacentEndPoint: 0
---- !u!1 &937839763 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5232140959990000797, guid: a4b51283f411b3442ad3c8d3da8a1064, type: 3}
-  m_PrefabInstance: {fileID: 2078692994}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &937839768
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 937839763}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bdfaacac992632e4fb7dc46b30b3c4f3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!95 &937839769
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 937839763}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: a5875e2021158f0448192a7dae135e06, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &976012031
 GameObject:
   m_ObjectHideFlags: 0
@@ -3059,41 +3023,9 @@ PrefabInstance:
       value: WorldTurn
       objectReference: {fileID: 0}
     - target: {fileID: 5232140959990000865, guid: a4b51283f411b3442ad3c8d3da8a1064, type: 3}
-      propertyPath: BigBlue
-      value: 
-      objectReference: {fileID: 1594306496}
-    - target: {fileID: 5232140959990000865, guid: a4b51283f411b3442ad3c8d3da8a1064, type: 3}
       propertyPath: MainCam
       value: 
       objectReference: {fileID: 519420031}
-    - target: {fileID: 5232140959990000865, guid: a4b51283f411b3442ad3c8d3da8a1064, type: 3}
-      propertyPath: BigSquare
-      value: 
-      objectReference: {fileID: 1401456127}
-    - target: {fileID: 5232140959990000865, guid: a4b51283f411b3442ad3c8d3da8a1064, type: 3}
-      propertyPath: PlayerOne
-      value: 
-      objectReference: {fileID: 1806858374}
-    - target: {fileID: 5232140959990000865, guid: a4b51283f411b3442ad3c8d3da8a1064, type: 3}
-      propertyPath: PlayerTwo
-      value: 
-      objectReference: {fileID: 120902417}
-    - target: {fileID: 5232140959990000865, guid: a4b51283f411b3442ad3c8d3da8a1064, type: 3}
-      propertyPath: SmallBlue
-      value: 
-      objectReference: {fileID: 1166749684}
-    - target: {fileID: 5232140959990000865, guid: a4b51283f411b3442ad3c8d3da8a1064, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5232140959990000865, guid: a4b51283f411b3442ad3c8d3da8a1064, type: 3}
-      propertyPath: SmallSquare
-      value: 
-      objectReference: {fileID: 359905029}
-    - target: {fileID: 5232140959990000865, guid: a4b51283f411b3442ad3c8d3da8a1064, type: 3}
-      propertyPath: RotationSpeed
-      value: 0.2
-      objectReference: {fileID: 0}
     - target: {fileID: 5232140959990000867, guid: a4b51283f411b3442ad3c8d3da8a1064, type: 3}
       propertyPath: m_RootOrder
       value: 6
