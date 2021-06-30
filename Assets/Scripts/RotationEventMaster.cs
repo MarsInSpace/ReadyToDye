@@ -7,7 +7,12 @@ public class RotationEventMaster : MonoBehaviour
     OrientationMaster orientationMaster;
 
     [SerializeField] Teleportation TeleporterA;
-    [SerializeField]Teleportation TeleporterB;
+    [SerializeField] Teleportation TeleporterB;
+
+    [SerializeField] EdgeCollider2D ColliderA;
+    [SerializeField] EdgeCollider2D ColliderB;
+    [SerializeField] EdgeCollider2D ColliderC;
+    [SerializeField] EdgeCollider2D ColliderD;
 
     private void Start()
     {
@@ -38,11 +43,17 @@ public class RotationEventMaster : MonoBehaviour
     {
         if (orientationMaster.LevelOrientation == OrientationMaster.LevelOrientations.half)
         {
-            //TODO
+            ColliderA.enabled = true;
+            ColliderB.enabled = true;
+            ColliderC.enabled = true;
+            ColliderD.enabled = true;
         }
         else if (orientationMaster.LevelOrientation == OrientationMaster.LevelOrientations.normal)
         {
-            //TODO
+            ColliderA.enabled = false;
+            ColliderB.enabled = false;
+            ColliderC.enabled = false;
+            ColliderD.enabled = false;
         }
     }
 }
