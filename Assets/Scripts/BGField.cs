@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class BGField : MonoBehaviour
 {
-    [SerializeField]
-    GameColorTypes FieldColor;
+    
+    public GameColorTypes FieldColor;
 
     private void OnTriggerExit2D(Collider2D collision)
     {

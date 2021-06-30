@@ -18,8 +18,8 @@ public class PlayerController : MonoBehaviour
     float ActiveCoolDown;                           // delay timer for repeated active switch
     float ActiveCoolDownTime = 0.2f;                // delay time frame
 
-    [SerializeField]
-    PlayerController OtherPlayer;                   // the second player
+    
+    public PlayerController OtherPlayer;                   // the second player
    
 
     //---- Color -----//
