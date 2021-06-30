@@ -5,29 +5,23 @@ using UnityEngine;
 public class Animations : MonoBehaviour
 {
     Animator anim;
-    public GameObject Halbkreis;
 
     private void Awake()
     {
-        anim = Halbkreis.GetComponent<Animator>();
+        anim = GetComponent<Animator>();
         if (anim == null)
         {
             Debug.Log("Animator not found");
         }
     }
-
-    private void Start()
-    {
-        
-    }
-
+    
     private void OnTriggerEnter2D(Collider2D collision)
  
     {
         if(collision.transform.tag == "Player")
         {
            // anim.SetTrigger("CircleFaster");
-            anim.SetBool("SpinFaster", true);
+            anim.SetBool("FasterSpin", true);
             Debug.Log("Triggert");
         }
         
@@ -37,7 +31,7 @@ public class Animations : MonoBehaviour
     {
         if (collision.transform.tag == "Player")
         {
-            anim.SetBool("SpinFaster", false);
+            anim.SetBool("FasterSpin", false);
             Debug.Log("Triggert nicht mehr");
         }
     }
