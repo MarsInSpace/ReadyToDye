@@ -8,13 +8,13 @@ public class GameOver : MonoBehaviour
 
     private float timeCounter= 0f;
 
-    
+
     private void OnTriggerStay2D(Collider2D collision)
     {
 
         if (collision.gameObject.tag.Equals("Player") && collision.GetComponent<PlayerController>().MyColorType == this.gameObject.GetComponent<BGField>().FieldColor)
             {
-                Debug.Log("Das hier klappt");
+                Debug.Log("DeathCollision");
 
                 timeCounter += Time.deltaTime;
 
@@ -22,7 +22,7 @@ public class GameOver : MonoBehaviour
                 {
                     timeCounter = 0;
 
-                    Debug.Log("Bin bis hier gekommen");
+                    Debug.Log("Tot");
 
                     SceneManager.LoadScene("MarScene");
                     //GameOver Screen SetActive
