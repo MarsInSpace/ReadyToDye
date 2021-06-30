@@ -45,22 +45,9 @@ public class OrientationMaster : MonoBehaviour
 
 
 
-    private void Start()
-    {
-        OnTurn += DelegateDebuger;
-    }
-
-
-
-
     public void EnableTurning()
     {
         canTurn = true;        
-    }
-
-    void DelegateDebuger()
-    {
-        Debug.Log("delegate was activated");
     }
 
     public void DisableTurning()
