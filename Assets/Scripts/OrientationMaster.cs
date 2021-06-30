@@ -25,7 +25,7 @@ public class OrientationMaster : MonoBehaviour
         half        //180°
     }
 
-    LevelOrientations LevelOrientation = LevelOrientations.normal;
+    public LevelOrientations LevelOrientation = LevelOrientations.normal;
 
 
 

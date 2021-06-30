@@ -18,6 +18,5 @@ public class WorldTurnAnimation : MonoBehaviour
     public void TriggerAnimation()
     {
         anim.SetTrigger("FasterSpin");
-        Debug.Log("Triggert");
     }
 }
