@@ -39,7 +39,7 @@ public class Goal : MonoBehaviour
         if (allPlayersInGoal == true)
         {
             //Winning Screen!
-            SceneManager.LoadScene("SampleScene 1");
+            SceneManager.LoadScene("MarScene");
         }
 
     }

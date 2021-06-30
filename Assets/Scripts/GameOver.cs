@@ -24,7 +24,7 @@ public class GameOver : MonoBehaviour
 
                     Debug.Log("Bin bis hier gekommen");
 
-                    SceneManager.LoadScene("SampleScene 1");
+                    SceneManager.LoadScene("MarScene");
                     //GameOver Screen SetActive
                 }
         }

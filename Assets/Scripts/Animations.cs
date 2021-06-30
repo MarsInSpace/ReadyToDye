@@ -20,14 +20,13 @@ public class Animations : MonoBehaviour
     {
         if(collision.transform.tag == "Player")
         {
-           // anim.SetTrigger("CircleFaster");
             anim.SetBool("FasterSpin", true);
             Debug.Log("Triggert");
         }
         
     }
 
-    private void OnCollisionExit2D(Collision2D collision)
+    private void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.transform.tag == "Player")
         {
@@ -35,4 +34,5 @@ public class Animations : MonoBehaviour
             Debug.Log("Triggert nicht mehr");
         }
     }
+    
 }
