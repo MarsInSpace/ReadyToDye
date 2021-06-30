@@ -12,9 +12,7 @@ public class Teleportation : MonoBehaviour
         if (collider.transform.tag == "Player" && !justTP )
         {
             collider.GetComponent<PlayerController>().Interacting = true;
-
-            Vector3 posOffset = transform.position - collider.transform.position;
-            collider.gameObject.transform.position = OtherPortal.transform.position + posOffset;
+            collider.gameObject.transform.position = OtherPortal.transform.position;
             justTP = true;
         }
     }

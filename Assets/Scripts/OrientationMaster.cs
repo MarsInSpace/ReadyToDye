@@ -6,17 +6,16 @@ public class OrientationMaster : MonoBehaviour
 {
     public static OrientationMaster Instance;
 
-    private void Awake()
-    {
-        if (OrientationMaster.Instance == null)
-            OrientationMaster.Instance = this;
-        else
-            Destroy(this.gameObject);
-    }
-
+    public delegate void Turn();
+    public Turn OnTurn;
 
     //false when level orientation must not be changed
-    public bool CanTurn = true;
+    bool canTurn = true;
+
+    public bool CanTurn
+    {
+        get { return canTurn; }
+    }
 
     public enum LevelOrientations
     {
@@ -29,6 +28,37 @@ public class OrientationMaster : MonoBehaviour
     LevelOrientations LevelOrientation = LevelOrientations.normal;
 
 
+
+
+
+
+
+
+    private void Awake()
+    {
+        if (OrientationMaster.Instance == null)
+            OrientationMaster.Instance = this;
+        else
+            Destroy(this.gameObject);
+    }
+
+
+
+
+    public void EnableTurning()
+    {
+        canTurn = true;        
+    }
+
+    public void DisableTurning()
+    {
+        canTurn = false;
+
+        if (OnTurn != null)
+            OnTurn();
+    }
+
+    
 
     public void SetLevelOrientation(LevelOrientations orientation)
     {

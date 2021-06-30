@@ -27,7 +27,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     public GameColorTypes MyColorType;
     GameColor MyColor;
-
+    public bool CanChangeColor = true;
 
     //---- Horizontal Movement -----//
     [SerializeField]
@@ -190,6 +190,8 @@ public class PlayerController : MonoBehaviour
 
     public void ChangeColor(GameColorTypes newColorType)
     {
+        if (!CanChangeColor) return;
+
         //change local color memory
         MyColor = new GameColor(newColorType);
         MyColorType = newColorType;
