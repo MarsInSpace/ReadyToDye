@@ -3656,6 +3656,10 @@ PrefabInstance:
       propertyPath: OtherPlayer
       value: 
       objectReference: {fileID: 6315003282884578151}
+    - target: {fileID: 6131238520060759312, guid: a9b90ec04a19ac4439ecc680a6743f81, type: 3}
+      propertyPath: m_LinearDrag
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 6131238520060759314, guid: a9b90ec04a19ac4439ecc680a6743f81, type: 3}
       propertyPath: m_Name
       value: PlayerA
@@ -3802,6 +3806,10 @@ PrefabInstance:
       propertyPath: OtherPlayer
       value: 
       objectReference: {fileID: 1780136924011402552}
+    - target: {fileID: 8177822102382727010, guid: ac34cc7f46800e5448cee77659bc6e39, type: 3}
+      propertyPath: m_LinearDrag
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 8177822102382727014, guid: ac34cc7f46800e5448cee77659bc6e39, type: 3}
       propertyPath: m_Name
       value: PlayerB
