@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 7108425131397154445}
   - component: {fileID: 7108425131397154443}
-  - component: {fileID: 7108425131397154444}
   m_Layer: 0
   m_Name: Telep4
   m_TagString: Untagged
@@ -83,19 +82,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &7108425131397154444
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7108425131397154446}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 987d5692e4ba9f54584e7bcb616ef7d5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  RotationValue: -30
 --- !u!1 &7108425131532534092
 GameObject:
   m_ObjectHideFlags: 0
@@ -106,7 +92,6 @@ GameObject:
   m_Component:
   - component: {fileID: 7108425131532534091}
   - component: {fileID: 7108425131532534089}
-  - component: {fileID: 7108425131532534090}
   m_Layer: 0
   m_Name: Telep3
   m_TagString: Untagged
@@ -179,19 +164,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &7108425131532534090
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7108425131532534092}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 987d5692e4ba9f54584e7bcb616ef7d5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  RotationValue: 30
 --- !u!1 &7108425132505684826
 GameObject:
   m_ObjectHideFlags: 0
@@ -202,7 +174,9 @@ GameObject:
   m_Component:
   - component: {fileID: 7108425132505684825}
   - component: {fileID: 6772520185108708496}
+  - component: {fileID: 5191668649871722680}
   - component: {fileID: -2090331118708575539}
+  - component: {fileID: 6158029935259217711}
   m_Layer: 0
   m_Name: TeleporterLila
   m_TagString: Untagged
@@ -242,6 +216,25 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
+--- !u!95 &5191668649871722680
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7108425132505684826}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 9221fb290b3bd1a438367c225f7a9414, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &-2090331118708575539
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -254,4 +247,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9fb5309f62d58864b93b64206ad3afa5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Active: 1
   OtherPortal: {fileID: 0}
+--- !u!114 &6158029935259217711
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7108425132505684826}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1add68753b7f184280cadcd82db7b9d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

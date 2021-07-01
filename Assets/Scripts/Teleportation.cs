@@ -8,6 +8,12 @@ public class Teleportation : MonoBehaviour
     public Teleportation OtherPortal;
     private static bool justTP = false;
 
+    TeleporterAnimation AnimationScript;
+
+    private void Start()
+    {
+        AnimationScript = GetComponent<TeleporterAnimation>();
+    }
 
 
     public void OnTriggerEnter2D(Collider2D collider)
@@ -18,6 +24,9 @@ public class Teleportation : MonoBehaviour
         {               
             collider.GetComponent<PlayerController>().Interacting = true;
             collider.gameObject.transform.position = OtherPortal.transform.position;
+
+            AnimationScript.TriggerAnimation();
+
             justTP = true;
         }
     }
