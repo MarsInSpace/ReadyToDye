@@ -1422,7 +1422,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.22602892, y: 0}
@@ -1780,6 +1780,7 @@ GameObject:
   - component: {fileID: 1252446905}
   - component: {fileID: 1252446907}
   - component: {fileID: 1252446908}
+  - component: {fileID: 1252446909}
   m_Layer: 0
   m_Name: Master
   m_TagString: Untagged
@@ -1855,6 +1856,18 @@ MonoBehaviour:
   CompoundFieldLightBlue: {fileID: 1594306502}
   FieldALightBlue: {fileID: 1594306498}
   FieldBLightBlue: {fileID: 1166749686}
+--- !u!114 &1252446909
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1252446904}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e90071fa5f449824a8c4a81f6884555c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1270737198 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7108425132505684825, guid: 0d2f38032773ffc41b8dabf3f74c67dd, type: 3}

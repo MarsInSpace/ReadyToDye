@@ -1,6 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEngine.SceneManagement;
 using UnityEngine;
 
 public class GameOver : MonoBehaviour
@@ -13,21 +12,18 @@ public class GameOver : MonoBehaviour
     {
 
         if (collision.gameObject.tag.Equals("Player") && collision.GetComponent<PlayerController>().MyColorType == this.gameObject.GetComponent<BGField>().FieldColor)
+        {
+            //.Log("DeathCollision");
+
+            timeCounter += Time.deltaTime;
+
+            if (timeCounter > 2f)
             {
-                //.Log("DeathCollision");
+                timeCounter = 0;
 
-                timeCounter += Time.deltaTime;
+                GameManager.Instance.SetGameOver(false);
 
-                if (timeCounter > 2f)
-                {
-                    timeCounter = 0;
-
-                    Physics2D.gravity = new Vector2(0, -9.81f);
-
-                    Debug.Log("Tot");
-
-                    SceneManager.LoadScene("MarScene");
-                }
+            }
         }
     }
 
