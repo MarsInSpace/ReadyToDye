@@ -9,10 +9,6 @@ public class BGField : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        //cheep disable
-        if (GetComponent<BoxCollider2D>().enabled == false)
-            return;
-
         //is trigger player and actually out of field or just interacting with other collider?
         if (collision.gameObject.tag.Equals("Player") && collision.GetComponent<PlayerController>().Interacting == false)
         {

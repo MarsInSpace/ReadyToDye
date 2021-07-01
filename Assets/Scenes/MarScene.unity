@@ -1849,6 +1849,12 @@ MonoBehaviour:
   ColliderB: {fileID: 1554264690}
   ColliderC: {fileID: 197346853}
   ColliderD: {fileID: 1364050743}
+  CompoundFieldOrange: {fileID: 1401456134}
+  FieldAOrange: {fileID: 1401456130}
+  FieldBOrange: {fileID: 359905032}
+  CompoundFieldLightBlue: {fileID: 1594306502}
+  FieldALightBlue: {fileID: 1594306498}
+  FieldBLightBlue: {fileID: 1166749686}
 --- !u!4 &1270737198 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7108425132505684825, guid: 0d2f38032773ffc41b8dabf3f74c67dd, type: 3}
@@ -2011,6 +2017,7 @@ GameObject:
   - component: {fileID: 1401456128}
   - component: {fileID: 1401456129}
   - component: {fileID: 1401456130}
+  - component: {fileID: 1401456134}
   - component: {fileID: 1401456132}
   - component: {fileID: 1401456131}
   - component: {fileID: 1401456133}
@@ -2157,6 +2164,39 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c455121c192b3f40ad9f5a99db8cab2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!60 &1401456134
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1401456127}
+  m_Enabled: 0
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 8.115, y: 4.79}
+    newSize: {x: 8.115, y: 4.79}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: -3.8317993, y: 2.1662111}
+      - {x: -3.800202, y: -2.6237886}
+      - {x: -5.9520154, y: -2.6011941}
+      - {x: -5.9639115, y: -7.4788632}
+      - {x: -3.0617478, y: -7.4873867}
+      - {x: -3.012989, y: -2.187734}
+      - {x: 3.8032904, y: -2.0968397}
+      - {x: 3.8032904, y: 2.1407905}
 --- !u!1001 &1521739993
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2613,6 +2653,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1594306497}
   - component: {fileID: 1594306498}
+  - component: {fileID: 1594306502}
   - component: {fileID: 1594306499}
   - component: {fileID: 1594306500}
   - component: {fileID: 1594306501}
@@ -2707,6 +2748,39 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c455121c192b3f40ad9f5a99db8cab2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!60 &1594306502
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1594306496}
+  m_Enabled: 0
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 5.5603447, y: 2.9478688}
+      - {x: 5.5686707, y: 7.16393}
+      - {x: 1.1803088, y: 7.193799}
+      - {x: 1.1688809, y: 2.3684454}
+      - {x: -3.4598737, y: 2.3616858}
+      - {x: -3.4672232, y: -2.4055371}
+      - {x: 3.438714, y: -2.3770278}
+      - {x: 3.3743463, y: 2.874853}
 --- !u!1 &1707976802
 GameObject:
   m_ObjectHideFlags: 0

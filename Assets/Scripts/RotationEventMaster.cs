@@ -14,15 +14,29 @@ public class RotationEventMaster : MonoBehaviour
     [SerializeField] EdgeCollider2D ColliderC;
     [SerializeField] EdgeCollider2D ColliderD;
 
+    [SerializeField] PolygonCollider2D CompoundFieldOrange;
+    [SerializeField] BoxCollider2D FieldAOrange;
+    [SerializeField] BoxCollider2D FieldBOrange;
+    [SerializeField] PolygonCollider2D CompoundFieldLightBlue;
+    [SerializeField] BoxCollider2D FieldALightBlue;
+    [SerializeField] BoxCollider2D FieldBLightBlue;
+
+    PlayerController[] Players;
+
+
     private void Start()
     {
         orientationMaster = OrientationMaster.Instance;
 
         orientationMaster.OnTurn += UpdateTeleporters;
         orientationMaster.OnTurn += UpdateColliders;
+        orientationMaster.OnTurn += UpdateFields;
 
         TeleporterA.Active = false;
         TeleporterB.Active = false;
+
+        Players = FindObjectsOfType<PlayerController>();
+
     }
 
     void UpdateTeleporters()
@@ -56,4 +70,35 @@ public class RotationEventMaster : MonoBehaviour
             ColliderD.enabled = false;
         }
     }
+
+    void UpdateFields()
+    {
+        foreach (PlayerController player in Players)
+            player.Interacting = true;
+
+        if (orientationMaster.LevelOrientation == OrientationMaster.LevelOrientations.half)
+        {
+            CompoundFieldLightBlue.enabled = false;
+            CompoundFieldOrange.enabled = false;
+
+            FieldAOrange.enabled = true;
+            FieldBOrange.enabled = true;
+            FieldALightBlue.enabled = true;
+            FieldBLightBlue.enabled = true;
+        }
+        else if (orientationMaster.LevelOrientation == OrientationMaster.LevelOrientations.normal)
+        {
+            CompoundFieldLightBlue.enabled = true;
+            CompoundFieldOrange.enabled = true;
+
+            FieldAOrange.enabled = false;
+            FieldBOrange.enabled = false;
+            FieldALightBlue.enabled = false;
+            FieldBLightBlue.enabled = false;
+        }
+
+        foreach (PlayerController player in Players)
+            player.Interacting = false;
+    }
+
 }
