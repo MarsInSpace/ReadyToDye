@@ -22,10 +22,11 @@ public class GameOver : MonoBehaviour
                 {
                     timeCounter = 0;
 
+                    Physics2D.gravity = new Vector2(0, -9.81f);
+
                     Debug.Log("Tot");
 
                     SceneManager.LoadScene("MarScene");
-                    //GameOver Screen SetActive
                 }
         }
     }

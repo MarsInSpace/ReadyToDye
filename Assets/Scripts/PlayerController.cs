@@ -15,8 +15,7 @@ public class PlayerController : MonoBehaviour
     //---- Player Switch -----//
 
     public bool Active;                             //is true when player is active player
-    float ActiveCoolDown;                           // delay timer for repeated active switch
-    float ActiveCoolDownTime = 0.2f;                // delay time frame
+    bool SwitchKeyDown;                             //input key memory
 
     
     public PlayerController OtherPlayer;                   // the second player
@@ -98,27 +97,25 @@ public class PlayerController : MonoBehaviour
 
     void SwitchActive()
     {
-        //cooldown time after which another will be input accepted
-        if (ActiveCoolDown > 0)
+        if (Input.GetKey(KeyCode.LeftShift) && !SwitchKeyDown)
         {
-            ActiveCoolDown -= Time.deltaTime;
-            return;
-        }
+            SwitchKeyDown = true;
 
-
-        if (Input.GetKey(KeyCode.LeftShift))
-        {
             //Debug.Log(this.name + " switched off");
             Active = false;
             OtherPlayer.SetPlayerActive();
         }
+
+        if (!Input.GetKey(KeyCode.LeftShift) && SwitchKeyDown)
+            SwitchKeyDown = false;
+
     }
 
-    
+
     public void SetPlayerActive()
     {
         Active = true;
-        ActiveCoolDown = ActiveCoolDownTime;
+        SwitchKeyDown = true;
     }
 
 
