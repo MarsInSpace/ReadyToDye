@@ -3596,12 +3596,16 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 3154382472083217704, guid: a9b90ec04a19ac4439ecc680a6743f81, type: 3}
+      propertyPath: JumpForce
+      value: 850
+      objectReference: {fileID: 0}
+    - target: {fileID: 3154382472083217704, guid: a9b90ec04a19ac4439ecc680a6743f81, type: 3}
       propertyPath: OtherPlayer
       value: 
       objectReference: {fileID: 6315003282884578151}
     - target: {fileID: 6131238520060759312, guid: a9b90ec04a19ac4439ecc680a6743f81, type: 3}
       propertyPath: m_LinearDrag
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6131238520060759314, guid: a9b90ec04a19ac4439ecc680a6743f81, type: 3}
       propertyPath: m_Name
@@ -3746,9 +3750,17 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 4500539285478034828, guid: ac34cc7f46800e5448cee77659bc6e39, type: 3}
+      propertyPath: JumpForce
+      value: 850
+      objectReference: {fileID: 0}
+    - target: {fileID: 4500539285478034828, guid: ac34cc7f46800e5448cee77659bc6e39, type: 3}
       propertyPath: OtherPlayer
       value: 
       objectReference: {fileID: 1780136924011402552}
+    - target: {fileID: 8177822102382727010, guid: ac34cc7f46800e5448cee77659bc6e39, type: 3}
+      propertyPath: m_LinearDrag
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 8177822102382727014, guid: ac34cc7f46800e5448cee77659bc6e39, type: 3}
       propertyPath: m_Name
       value: PlayerB
