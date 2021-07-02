@@ -3575,6 +3575,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: "TeleporterWei\xDFB"
       objectReference: {fileID: 0}
+    - target: {fileID: 8972510952033112574, guid: d7d9fc7e30d8fdc43aed5a42f4c401ca, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d7d9fc7e30d8fdc43aed5a42f4c401ca, type: 3}
 --- !u!114 &1187715728092161652 stripped

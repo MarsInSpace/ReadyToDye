@@ -103,6 +103,8 @@ public class PlayerController : MonoBehaviour
 
             //Debug.Log(this.name + " switched off");
             Active = false;
+            transform.Find("ActiveHalo").GetComponent<SpriteRenderer>().enabled = false;
+
             OtherPlayer.SetPlayerActive();
         }
 
@@ -116,6 +118,8 @@ public class PlayerController : MonoBehaviour
     {
         Active = true;
         SwitchKeyDown = true;
+
+        transform.Find("ActiveHalo").GetComponent<SpriteRenderer>().enabled = true;
     }
 
 
