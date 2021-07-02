@@ -16,8 +16,8 @@ public class TurnWorld : MonoBehaviour
     Quaternion TargetRotation;
     Vector2 TargetGravity;
 
-    [SerializeField]
     Camera MainCam;
+    PlayerController[] Players;
 
     WorldTurnAnimation AnimationScript;
 
@@ -25,12 +25,12 @@ public class TurnWorld : MonoBehaviour
     private void Start()
     {
         AnimationScript = GetComponent<WorldTurnAnimation>();
+        MainCam = Camera.main;
+        Players = FindObjectsOfType<PlayerController>();
     }
 
     private void FixedUpdate()
     {
-
-
         if (Turning)
         {
             UpdateWorldTurn();
@@ -49,12 +49,14 @@ public class TurnWorld : MonoBehaviour
         if (!OrientationMaster.Instance.CanTurn || TriggerCoolDown > 0)
             return;
 
+        foreach (PlayerController player in Players)
+            player.Interacting = true;
+
         OrientationMaster.Instance.DisableTurning();
         Turning = true;
 
         TargetRotation = Quaternion.Euler(0, 0, MainCam.transform.rotation.eulerAngles.z + 180);
         TargetGravity = Physics2D.gravity * -1;
-
 
         RotationTimer = 0;
         RotationSinceTurning = 0;
@@ -88,6 +90,9 @@ public class TurnWorld : MonoBehaviour
 
             OrientationMaster.Instance.EnableTurning();
             Turning = false;
+
+            foreach (PlayerController player in Players)
+                player.Interacting = false;
 
             OrientationMaster.Instance.SetOrientationByAngle(MainCam.transform.rotation.eulerAngles.z);
 

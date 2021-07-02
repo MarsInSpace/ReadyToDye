@@ -21,9 +21,6 @@ public class RotationEventMaster : MonoBehaviour
     [SerializeField] BoxCollider2D FieldALightBlue;
     [SerializeField] BoxCollider2D FieldBLightBlue;
 
-    PlayerController[] Players;
-
-
     private void Start()
     {
         orientationMaster = OrientationMaster.Instance;
@@ -34,9 +31,6 @@ public class RotationEventMaster : MonoBehaviour
 
         TeleporterA.SetActive(false);
         TeleporterB.SetActive(false);
-
-        Players = FindObjectsOfType<PlayerController>();
-
     }
 
     void UpdateTeleporters()
@@ -73,9 +67,6 @@ public class RotationEventMaster : MonoBehaviour
 
     void UpdateFields()
     {
-        foreach (PlayerController player in Players)
-            player.Interacting = true;
-
         if (orientationMaster.LevelOrientation == OrientationMaster.LevelOrientations.half)
         {
             CompoundFieldLightBlue.enabled = false;
@@ -96,9 +87,5 @@ public class RotationEventMaster : MonoBehaviour
             FieldALightBlue.enabled = false;
             FieldBLightBlue.enabled = false;
         }
-
-        foreach (PlayerController player in Players)
-            player.Interacting = false;
     }
-
 }
