@@ -32,8 +32,8 @@ public class RotationEventMaster : MonoBehaviour
         orientationMaster.OnTurn += UpdateColliders;
         orientationMaster.OnTurn += UpdateFields;
 
-        TeleporterA.Active = false;
-        TeleporterB.Active = false;
+        TeleporterA.SetActive(false);
+        TeleporterB.SetActive(false);
 
         Players = FindObjectsOfType<PlayerController>();
 
@@ -43,13 +43,13 @@ public class RotationEventMaster : MonoBehaviour
     {
         if (orientationMaster.LevelOrientation == OrientationMaster.LevelOrientations.half)
         {
-            TeleporterA.Active = false;
-            TeleporterB.Active = false;
+            TeleporterA.SetActive(false);
+            TeleporterB.SetActive(false);
         }
         else if(orientationMaster.LevelOrientation == OrientationMaster.LevelOrientations.normal)
         {
-            TeleporterA.Active = true;
-            TeleporterB.Active = true;
+            TeleporterA.SetActive(true);
+            TeleporterB.SetActive(true);
         }
     }
 

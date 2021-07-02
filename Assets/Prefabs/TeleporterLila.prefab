@@ -261,3 +261,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c1add68753b7f184280cadcd82db7b9d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  InnerSprite: {fileID: 21300000, guid: 9bf4fa29ec2aa3c4e8112517fb182bca, type: 3}
+  OuterSprite: {fileID: 21300000, guid: 26833685c2379ac489bc236b9bf6969e, type: 3}

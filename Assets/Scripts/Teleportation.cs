@@ -42,5 +42,14 @@ public class Teleportation : MonoBehaviour
             justTP = false;
         }
     }
+
+
+    public void SetActive(bool active)
+    {
+        if (Active == active) return;
+
+        Active = active;
+        AnimationScript.SwitchEnabled();
+    }
 }
 
