@@ -9,9 +9,15 @@ EditorBuildSettings:
     path: Assets/Scenes/MainMenu.unity
     guid: 96855940ed04a984ca406baaccfe8627
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
+    path: Assets/Scenes/LevelOverview.unity
+    guid: cca6d5083a536c4478baf3c92944cc5e
+  - enabled: 1
+    path: Assets/Scenes/MarScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
     path: Assets/Scenes/LuanesUIScene.unity
     guid: 376306ba193ae5349af8cce6faf285b3
+  - enabled: 1
+    path: Assets/Scenes/SampleScene 1.unity
+    guid: 303f1edc57d9ebc46843e6e81ab948d1
   m_configObjects: {}
