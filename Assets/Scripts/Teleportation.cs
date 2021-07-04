@@ -28,6 +28,8 @@ public class Teleportation : MonoBehaviour
             AnimationScript.TriggerAnimation();
 
             justTP = true;
+
+            FindObjectOfType<AudioManager>().Play("Teleport");
         }
     }
 

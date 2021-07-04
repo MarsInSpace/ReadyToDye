@@ -70,6 +70,8 @@ public class PlayerController : MonoBehaviour
         MyColor = new GameColor(MyColorType);
 
         this.gameObject.layer = LayerMask.NameToLayer(MyColor.Name);
+
+        FindObjectOfType<AudioManager>().Play("Intro");
     }
 
 
@@ -104,6 +106,8 @@ public class PlayerController : MonoBehaviour
             //Debug.Log(this.name + " switched off");
             Active = false;
             transform.Find("ActiveHalo").GetComponent<SpriteRenderer>().enabled = false;
+
+            FindObjectOfType<AudioManager>().Play("PlayerSwitch");
 
             OtherPlayer.SetPlayerActive();
         }
@@ -174,11 +178,15 @@ public class PlayerController : MonoBehaviour
             MyRB.AddForce(OrientationMaster.Instance.Up() * JumpForce, ForceMode2D.Impulse);
             SpaceKeyDown = true;
 
+            FindObjectOfType<AudioManager>().Play("Jump");
+
             //Debug.Log("Jumped");
         }
 
         if (SpaceKeyDown && !Input.GetKey(KeyCode.Space))
             SpaceKeyDown = false;
+
+        
 
         //Debug.Log("Current velocity = " + MyRB.velocity);
     }
@@ -208,6 +216,8 @@ public class PlayerController : MonoBehaviour
         //update other player to associated color
         if(OtherPlayer.MyColorType != ColorMaster.Instance.GetRespectiveColor(MyColorType))
             OtherPlayer.ChangeColor(ColorMaster.Instance.GetRespectiveColor(MyColorType));
+
+        FindObjectOfType<AudioManager>().Play("ColorSwitch");
     }
 
 
