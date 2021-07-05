@@ -193,6 +193,8 @@ public class PlayerController : MonoBehaviour
     {
         if (!CanChangeColor) return;
 
+        GetComponent<PlayerEffects>().Glow();
+
         //change local color memory
         MyColor = new GameColor(newColorType);
         MyColorType = newColorType;
