@@ -73,7 +73,6 @@ public class TurnWorld : MonoBehaviour
         float radiantFactor = Mathf.Cos(Mathf.PI * RotationTimer * RotationSpeed);
         float newRotationSinceTurning = 180 - 180 * (radiantFactor * Mathf.Abs(radiantFactor));
 
-
         float rotationAngle = newRotationSinceTurning - RotationSinceTurning;
         RotationSinceTurning = newRotationSinceTurning;
 
@@ -81,12 +80,11 @@ public class TurnWorld : MonoBehaviour
         Physics2D.gravity = Vector2.Lerp(Physics2D.gravity, TargetGravity, RotationSpeed * 0.1f);
 
 
+        //Finish Turning
         if (Mathf.Abs(MainCam.transform.rotation.eulerAngles.z - TargetRotation.eulerAngles.z) < 0.02f)
         {
             MainCam.transform.rotation = TargetRotation;
             Physics2D.gravity = TargetGravity;
-
-            //Debug.Log("Done Turning");
 
             OrientationMaster.Instance.EnableTurning();
             Turning = false;
