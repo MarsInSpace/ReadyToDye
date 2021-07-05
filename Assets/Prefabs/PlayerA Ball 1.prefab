@@ -244,6 +244,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ColorChangeSprite: {fileID: 3036621392817178211}
+  ActiveHalo: {fileID: 8149313730492054825}
   ColorChangeGlowFallOff: 0.07
 --- !u!1 &8248522732819097104
 GameObject:

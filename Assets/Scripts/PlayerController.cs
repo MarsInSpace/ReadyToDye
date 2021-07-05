@@ -11,6 +11,8 @@ public class PlayerController : MonoBehaviour
 
     public bool Interacting;                        //is true when player interacts with certain interactive objects in the scene (teleporter, world turn etc.)
 
+    PlayerEffects EffectsScript;                    //script responsible for any playerrelated visual Feedback
+
 
     //---- Player Switch -----//
 
@@ -63,9 +65,7 @@ public class PlayerController : MonoBehaviour
     private void Start()
     {
         MyRB = GetComponent<Rigidbody2D>();
-
-        if (MyRB == null)
-            Debug.LogError("no Rigidbody on Player found in PlayerController");
+        EffectsScript = GetComponent<PlayerEffects>();
 
         MyColor = new GameColor(MyColorType);
 
@@ -103,7 +103,7 @@ public class PlayerController : MonoBehaviour
 
             //Debug.Log(this.name + " switched off");
             Active = false;
-            transform.Find("ActiveHalo").GetComponent<SpriteRenderer>().enabled = false;
+            EffectsScript.SetActiveHalo(false);
 
             OtherPlayer.SetPlayerActive();
         }
@@ -119,7 +119,7 @@ public class PlayerController : MonoBehaviour
         Active = true;
         SwitchKeyDown = true;
 
-        transform.Find("ActiveHalo").GetComponent<SpriteRenderer>().enabled = true;
+        EffectsScript.SetActiveHalo(true);
     }
 
 
@@ -193,7 +193,7 @@ public class PlayerController : MonoBehaviour
     {
         if (!CanChangeColor) return;
 
-        GetComponent<PlayerEffects>().Glow();
+        EffectsScript.Glow();
 
         //change local color memory
         MyColor = new GameColor(newColorType);
