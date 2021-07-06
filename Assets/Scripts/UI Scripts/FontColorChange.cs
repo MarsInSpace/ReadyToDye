@@ -6,8 +6,7 @@ using UnityEngine.EventSystems;
 
 public class FontColorChange : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
-    public TMP_Text Text;
-    
+    public TMP_Text Text;    
 
     void Start()
     {

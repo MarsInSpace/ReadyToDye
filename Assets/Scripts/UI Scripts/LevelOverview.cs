@@ -7,6 +7,7 @@ public class LevelOverview : MonoBehaviour
 {
     public GameObject LevelOverviewUI;
     public GameObject SettingsMenuUI;
+    public GameObject TutorialUI;
 
     // Start is called before the first frame update
     void Start()
@@ -18,7 +19,7 @@ public class LevelOverview : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            if (SettingsMenuUI.activeInHierarchy)
+            if (SettingsMenuUI.activeInHierarchy || TutorialUI.activeInHierarchy)
             {
                 HideSettings();
             }
@@ -44,7 +45,13 @@ public class LevelOverview : MonoBehaviour
     public void HideSettings()
     {
         SettingsMenuUI.SetActive(false);
+        TutorialUI.SetActive(false);
         LevelOverviewUI.SetActive(true);
+    }
+
+    public void OpenTutorial()
+    {
+        TutorialUI.SetActive(true);
     }
 
     public void LoadLevel1()
