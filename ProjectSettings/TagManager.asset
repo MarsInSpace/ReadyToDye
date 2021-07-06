@@ -7,6 +7,7 @@ TagManager:
   - LevelObject
   - Teleport 2
   - Teleport 1
+  - Teleporter
   layers:
   - Default
   - TransparentFX

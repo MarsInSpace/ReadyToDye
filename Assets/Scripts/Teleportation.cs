@@ -8,6 +8,8 @@ public class Teleportation : MonoBehaviour
     public Teleportation OtherPortal;
     private static bool justTP = false;
 
+   
+
     TeleporterAnimation AnimationScript;
 
     private void Start()
@@ -23,6 +25,7 @@ public class Teleportation : MonoBehaviour
         if (collider.transform.tag == "Player" && !justTP)
         {               
             collider.GetComponent<PlayerController>().Interacting = true;
+
             collider.gameObject.transform.position = OtherPortal.transform.position;
 
             AnimationScript.TriggerAnimation();
@@ -32,7 +35,7 @@ public class Teleportation : MonoBehaviour
     }
 
 
-    private void OnTriggerExit2D(Collider2D collision)
+    public void OnTriggerExit2D(Collider2D collision)
     {
         if (!Active) return;
 
@@ -51,5 +54,6 @@ public class Teleportation : MonoBehaviour
         Active = active;
         AnimationScript.SwitchEnabled();
     }
+
 }
 

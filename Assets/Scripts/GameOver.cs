@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class GameOver : MonoBehaviour
 {
-
     private float timeCounter = 0;
     private float GameOverTimeDelay = 2;
 
@@ -50,5 +49,5 @@ public class GameOver : MonoBehaviour
         else
             timeCounter = 0;
     }
-
+    
 }
