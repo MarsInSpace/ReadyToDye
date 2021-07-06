@@ -2,12 +2,12 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    
+
 
     Rigidbody2D MyRB;                               //Rigidbody of the player
 
     [SerializeField]
-    bool Grounded;                                  //true when player on solid object
+    public bool Grounded;                                  //true when player on solid object
 
     public bool Interacting;                        //is true when player interacts with certain interactive objects in the scene (teleporter, world turn etc.)
 
@@ -40,7 +40,7 @@ public class PlayerController : MonoBehaviour
 
     [SerializeField]
     float JumpForce;                                //how high                             
-    bool SpaceKeyDown;                              //input key memory
+    public bool SpaceKeyDown;                              //input key memory
 
 
     //---- Layer Masks -----//
@@ -166,7 +166,7 @@ public class PlayerController : MonoBehaviour
 
 
 
-    private void Jump()
+     public void Jump()
     {
         if (Grounded && Input.GetKey(KeyCode.Space) && !SpaceKeyDown)
         {            

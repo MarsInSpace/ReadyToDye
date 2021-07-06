@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class GameOver : MonoBehaviour
 {
-
+    
     private float timeCounter= 0f;
 
 
@@ -29,5 +29,5 @@ public class GameOver : MonoBehaviour
                 }
         }
     }
-
+    
 }

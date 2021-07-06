@@ -5,20 +5,21 @@ using UnityEngine;
 public class Teleportation : MonoBehaviour
 {
     public GameObject OtherPortal;
-    private static bool justTP = false;
+    public bool justTP = false;
+
 
     public void OnTriggerEnter2D(Collider2D collider)
     {
         if (collider.transform.tag == "Player" && !justTP )
         {
-            collider.GetComponent<PlayerController>().Interacting = true;
+           collider.GetComponent<PlayerController>().Interacting = true;
             collider.gameObject.transform.position = OtherPortal.transform.position;
             justTP = true;
         }
     }
 
 
-    private void OnTriggerExit2D(Collider2D collision)
+    public void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.transform.tag == "Player")
         {
@@ -26,6 +27,6 @@ public class Teleportation : MonoBehaviour
             justTP = false;
         }
     }
-
+   
 }
 
