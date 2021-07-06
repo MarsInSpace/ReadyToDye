@@ -6,7 +6,7 @@ public class Teleportation : MonoBehaviour
 {
     public bool Active = true;
     public Teleportation OtherPortal;
-    private static bool justTP = false;
+    public bool justTP = false;
 
    
 
@@ -22,8 +22,8 @@ public class Teleportation : MonoBehaviour
     {
         if (!Active) return;
 
-        if (collider.transform.tag == "Player" && !justTP)
-        {               
+        if (collider.transform.tag == "Player" && !OtherPortal.justTP)
+        {
             collider.GetComponent<PlayerController>().Interacting = true;
 
             collider.gameObject.transform.position = OtherPortal.transform.position;
@@ -31,7 +31,9 @@ public class Teleportation : MonoBehaviour
             AnimationScript.TriggerAnimation();
 
             justTP = true;
-        }
+
+            Debug.Log("justTP = " + justTP + " in " + this.gameObject);
+        }        
     }
 
 
@@ -41,8 +43,13 @@ public class Teleportation : MonoBehaviour
 
         if (collision.transform.tag == "Player")
         {
+            if (OtherPortal.justTP)
+            {
+                OtherPortal.justTP = false;
+                Debug.Log("justTP = " + OtherPortal.justTP + " in " + OtherPortal.gameObject);
+            }
+
             collision.GetComponent<PlayerController>().Interacting = false;
-            justTP = false;
         }
     }
 

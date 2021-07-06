@@ -14,7 +14,7 @@ public class GameOver : MonoBehaviour
 
         if (collision.gameObject.tag.Equals("Player") && collision.GetComponent<PlayerController>().MyColorType == this.gameObject.GetComponent<BGField>().FieldColor)
         {
-            Debug.Log("Check for overlaps");
+            //Debug.Log("Check for overlaps");
 
             //Check that Player is only overlaping one BGField
             Collider2D[] PlayerOverlaps = Physics2D.OverlapBoxAll(collision.transform.position, collision.transform.localScale, 0);
@@ -30,7 +30,7 @@ public class GameOver : MonoBehaviour
                     return;
             }
 
-            Debug.Log("only one Overlap found");
+            //Debug.Log("only one Overlap found");
 
 
             //.Log("DeathCollision");
