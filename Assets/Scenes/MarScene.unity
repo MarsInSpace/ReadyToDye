@@ -985,6 +985,30 @@ EdgeCollider2D:
   m_AdjacentEndPoint: {x: 0, y: 0}
   m_UseAdjacentStartPoint: 0
   m_UseAdjacentEndPoint: 0
+--- !u!1 &655714359 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6131238520060759314, guid: a9b90ec04a19ac4439ecc680a6743f81, type: 3}
+  m_PrefabInstance: {fileID: 1780136924011402551}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &655714360
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 655714359}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 5a461cbfed7439a4895907b135687f4c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &695406117
 GameObject:
   m_ObjectHideFlags: 0
@@ -1308,7 +1332,7 @@ Animator:
   m_GameObject: {fileID: 917921391}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: b445f32a724d0a44386c0c077726c861, type: 2}
+  m_Controller: {fileID: 9100000, guid: 5a461cbfed7439a4895907b135687f4c, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -1449,7 +1473,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 3.1640625, y: 2.015625}
+    oldSize: {x: 3.6818182, y: 2.3454545}
     newSize: {x: 7.44, y: 8.93}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -3746,7 +3770,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3154382472083217704, guid: a9b90ec04a19ac4439ecc680a6743f81, type: 3}
   m_PrefabInstance: {fileID: 1780136924011402551}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 655714359}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e3d6cc037aa674e41aa3bd3b465b028a, type: 3}
