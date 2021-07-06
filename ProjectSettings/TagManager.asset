@@ -48,6 +48,18 @@ TagManager:
   - name: Background
     uniqueID: 3981553903
     locked: 0
+  - name: HiddenTeleporter
+    uniqueID: 1203531731
+    locked: 0
+  - name: BigOrangeSquare
+    uniqueID: 2095661293
+    locked: 0
+  - name: PrettyThings
+    uniqueID: 4167477161
+    locked: 0
   - name: Foreground
     uniqueID: 82287945
+    locked: 0
+  - name: NoiseLayer
+    uniqueID: 2657820311
     locked: 0
