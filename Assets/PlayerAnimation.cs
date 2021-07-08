@@ -4,15 +4,12 @@ using UnityEngine;
 
 public class PlayerAnimation : MonoBehaviour
 {
-
     Animator Anim;
-   
-   // public Teleportation teleporterScript;
 
     public void Start()
     {
         Anim = GetComponent<Animator>();
-      //  teleporterScript = GameObject.Find("TeleporterLilaB").GetComponent<Teleportation>();
+      
     }
 
     public void Update()
@@ -21,13 +18,19 @@ public class PlayerAnimation : MonoBehaviour
         //Idle/breathing is standard
 
         //JUMP
-        if(GetComponent<PlayerController>().Grounded && GetComponent<PlayerController>().SpaceKeyDown == false  && Input.GetKey(KeyCode.Space))
-        {
-            Anim.SetTrigger("jumping");
-        }
 
-        //Walking
-        if(Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D))
+        if (GetComponent<PlayerController>().Active == true)
+        {
+
+        if (GetComponent<PlayerController>().Grounded && GetComponent<PlayerController>().SpaceKeyDown == false  && Input.GetKey(KeyCode.Space) && GetComponent<PlayerController>().Active == true)
+        {
+
+                //Anim.Play("Base Layer.Jump, 0, 1f");
+                Anim.SetTrigger("jumping");
+            }
+
+            //WALKING
+            if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D) && GetComponent<PlayerController>().Active == true )
         {
             Anim.SetBool("isRolling", true);
         }
@@ -36,26 +39,8 @@ public class PlayerAnimation : MonoBehaviour
             Anim.SetBool("isRolling", false);
         }
 
-
-        //IN TELEPORT 
-        /*if (teleporterScript.justTP == false)
-        {
-            Anim.SetTrigger("teleporting");
-        }*/
-
+        }
 
     }
 
-    //IN TELEPORT 
-    
-   /* private void OnTriggerEnter2D(Collider2D collider)
-    {
-        if(collider.transform.tag == "Teleporter" )
-        {
-            Anim.SetTrigger("teleporting");
-            
-        }
-    }*/
-  
-    
 }

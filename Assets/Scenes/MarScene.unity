@@ -2957,6 +2957,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: TeleporterLilaB
       objectReference: {fileID: 0}
+    - target: {fileID: 7108425132505684826, guid: 0d2f38032773ffc41b8dabf3f74c67dd, type: 3}
+      propertyPath: m_TagString
+      value: Teleporter
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0d2f38032773ffc41b8dabf3f74c67dd, type: 3}
 --- !u!1 &913764003
@@ -3141,7 +3145,7 @@ Animator:
   m_GameObject: {fileID: 917921391}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 5a461cbfed7439a4895907b135687f4c, type: 2}
+  m_Controller: {fileID: 9100000, guid: b0880979f92cf3b468a91c2d549bef98, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -7715,6 +7719,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: "TeleporterWei\xDFB"
       objectReference: {fileID: 0}
+    - target: {fileID: 3804709409914709534, guid: d7d9fc7e30d8fdc43aed5a42f4c401ca, type: 3}
+      propertyPath: m_TagString
+      value: Teleporter
+      objectReference: {fileID: 0}
     - target: {fileID: 8972510952033112574, guid: d7d9fc7e30d8fdc43aed5a42f4c401ca, type: 3}
       propertyPath: m_IsTrigger
       value: 1
@@ -7754,6 +7762,10 @@ PrefabInstance:
     - target: {fileID: 6131238520060759312, guid: a9b90ec04a19ac4439ecc680a6743f81, type: 3}
       propertyPath: m_LinearDrag
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6131238520060759312, guid: a9b90ec04a19ac4439ecc680a6743f81, type: 3}
+      propertyPath: m_Constraints
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 6131238520060759314, guid: a9b90ec04a19ac4439ecc680a6743f81, type: 3}
       propertyPath: m_Name
@@ -7879,6 +7891,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: "TeleporterWei\xDFA"
       objectReference: {fileID: 0}
+    - target: {fileID: 3804709409914709534, guid: d7d9fc7e30d8fdc43aed5a42f4c401ca, type: 3}
+      propertyPath: m_TagString
+      value: Teleporter
+      objectReference: {fileID: 0}
     - target: {fileID: 8972510952033112574, guid: d7d9fc7e30d8fdc43aed5a42f4c401ca, type: 3}
       propertyPath: m_IsTrigger
       value: 1
@@ -7912,6 +7928,10 @@ PrefabInstance:
     - target: {fileID: 8177822102382727010, guid: ac34cc7f46800e5448cee77659bc6e39, type: 3}
       propertyPath: m_LinearDrag
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8177822102382727010, guid: ac34cc7f46800e5448cee77659bc6e39, type: 3}
+      propertyPath: m_Constraints
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 8177822102382727011, guid: ac34cc7f46800e5448cee77659bc6e39, type: 3}
       propertyPath: m_DrawMode
@@ -8040,6 +8060,10 @@ PrefabInstance:
     - target: {fileID: 7108425132505684826, guid: 0d2f38032773ffc41b8dabf3f74c67dd, type: 3}
       propertyPath: m_Name
       value: TeleporterLilaA
+      objectReference: {fileID: 0}
+    - target: {fileID: 7108425132505684826, guid: 0d2f38032773ffc41b8dabf3f74c67dd, type: 3}
+      propertyPath: m_TagString
+      value: Teleporter
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0d2f38032773ffc41b8dabf3f74c67dd, type: 3}
