@@ -3,14 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class MainMenu : MonoBehaviour
+public class LevelOverview : MonoBehaviour
 {
-    public GameObject MainMenuUI;
+    public GameObject LevelOverviewUI;
     public GameObject SettingsMenuUI;
     public GameObject TutorialUI;
 
-
-    public void Start()
+    // Start is called before the first frame update
+    void Start()
     {
         SettingsMenuUI.SetActive(false);
     }
@@ -20,37 +20,47 @@ public class MainMenu : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             if (SettingsMenuUI.activeInHierarchy || TutorialUI.activeInHierarchy)
+            {
                 HideSettings();
+            }
+
+            else
+            {
+                ShowSettings();
+            }
         }
     }
 
-    //loads level overview
-    public void LoadLevelOverview()
+    public void LoadMenu()
     {
-        SceneManager.LoadScene("LevelOverview");
+        SceneManager.LoadScene("MainMenu");
     }
 
     public void ShowSettings()
     {
         SettingsMenuUI.SetActive(true);
-        MainMenuUI.SetActive(false);
-    }
+        LevelOverviewUI.SetActive(false);
+    }    
 
     public void HideSettings()
     {
         SettingsMenuUI.SetActive(false);
         TutorialUI.SetActive(false);
-        MainMenuUI.SetActive(true);
+        LevelOverviewUI.SetActive(true);
     }
 
     public void OpenTutorial()
     {
-        //MainMenuUI.SetActive(false); (brauchen wir nicht wenn tutorial ui opaque ist)
         TutorialUI.SetActive(true);
     }
 
-    public void QuitGame()
+    public void LoadLevel1()
     {
-        Application.Quit();
+        SceneManager.LoadScene("MarScene");
+    }
+
+    public void LoadLevel2()
+    {
+        SceneManager.LoadScene("MarScene");
     }
 }
