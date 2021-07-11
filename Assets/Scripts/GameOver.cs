@@ -36,6 +36,8 @@ public class GameOver : MonoBehaviour
             //.Log("DeathCollision");
 
             timeCounter += Time.deltaTime;
+            //Debug.Log("timer = " + timeCounter);
+
 
             collision.GetComponent<PlayerEffects>().Die(timeCounter);
 
@@ -46,8 +48,11 @@ public class GameOver : MonoBehaviour
                 GameManager.Instance.SetGameOver(false);
             }
         }
-        else
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.tag.Equals("Player"))
             timeCounter = 0;
     }
-    
 }
