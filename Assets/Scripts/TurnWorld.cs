@@ -62,8 +62,6 @@ public class TurnWorld : MonoBehaviour
         RotationSinceTurning = 0;
 
         AnimationScript.TriggerAnimation();
-
-        FindObjectOfType<AudioManager>().Play("WorldTurn");
     }
 
 

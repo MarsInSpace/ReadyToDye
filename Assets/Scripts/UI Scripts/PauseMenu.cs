@@ -9,7 +9,6 @@ public class PauseMenu : MonoBehaviour
 
     public GameObject PauseMenuUI;
     public GameObject SettingsMenuUI;
-    public GameObject TutorialUI;
 
 
     void Start()
@@ -23,7 +22,7 @@ public class PauseMenu : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            if (SettingsMenuUI.activeInHierarchy || TutorialUI.activeInHierarchy)
+            if (SettingsMenuUI.activeInHierarchy)
                 PauseGame();
 
             else if (GamePaused)
@@ -38,7 +37,6 @@ public class PauseMenu : MonoBehaviour
     {
         PauseMenuUI.SetActive(true);
         SettingsMenuUI.SetActive(false);
-        TutorialUI.SetActive(false);
         Time.timeScale = 0f;
         GamePaused = true;
     }
@@ -50,16 +48,10 @@ public class PauseMenu : MonoBehaviour
         GamePaused = false;
     }
 
-    public void OpenSettings()
+    public void Settings()
     {
         SettingsMenuUI.SetActive(true);
         PauseMenuUI.SetActive(false);
-        TutorialUI.SetActive(false);
-    }
-
-    public void OpenTutorial()
-    {
-        TutorialUI.SetActive(true);
     }
 
     public void LoadMenu()
