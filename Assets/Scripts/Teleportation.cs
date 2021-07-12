@@ -33,7 +33,9 @@ public class Teleportation : MonoBehaviour
             justTP = true;
 
             Debug.Log("justTP = " + justTP + " in " + this.gameObject);
-        }        
+        }
+
+        FindObjectOfType<AudioManager>().Play("Teleport");
     }
 
 
