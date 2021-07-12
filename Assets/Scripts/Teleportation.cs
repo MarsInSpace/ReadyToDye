@@ -32,7 +32,7 @@ public class Teleportation : MonoBehaviour
 
             justTP = true;
 
-            Debug.Log("justTP = " + justTP + " in " + this.gameObject);
+            //Debug.Log("justTP = " + justTP + " in " + this.gameObject);
         }        
     }
 
@@ -46,7 +46,7 @@ public class Teleportation : MonoBehaviour
             if (OtherPortal.justTP)
             {
                 OtherPortal.justTP = false;
-                Debug.Log("justTP = " + OtherPortal.justTP + " in " + OtherPortal.gameObject);
+                //Debug.Log("justTP = " + OtherPortal.justTP + " in " + OtherPortal.gameObject);
             }
 
             collision.GetComponent<PlayerController>().Interacting = false;

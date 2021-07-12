@@ -25,6 +25,6 @@ public class GameManager : MonoBehaviour
         Debug.Log("Won = " + won);
 
         Physics2D.gravity = new Vector2(0, -9.81f);
-        SceneManager.LoadScene("MarScene");
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }
