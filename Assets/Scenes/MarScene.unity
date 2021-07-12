@@ -1067,42 +1067,6 @@ EdgeCollider2D:
   m_AdjacentEndPoint: {x: 0, y: 0}
   m_UseAdjacentStartPoint: 0
   m_UseAdjacentEndPoint: 0
---- !u!1 &655714359 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6131238520060759314, guid: a9b90ec04a19ac4439ecc680a6743f81, type: 3}
-  m_PrefabInstance: {fileID: 1780136924011402551}
-  m_PrefabAsset: {fileID: 0}
---- !u!95 &655714360
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 655714359}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 5a461cbfed7439a4895907b135687f4c, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &655714361
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 655714359}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ddbd441fd7f23384db855e238bac75e4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &695406117
 GameObject:
   m_ObjectHideFlags: 0
@@ -1575,42 +1539,6 @@ Transform:
   m_Father: {fileID: 2010227986}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &917921391 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8177822102382727014, guid: ac34cc7f46800e5448cee77659bc6e39, type: 3}
-  m_PrefabInstance: {fileID: 6315003282884578150}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &917921392
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 917921391}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ddbd441fd7f23384db855e238bac75e4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!95 &917921397
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 917921391}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 5a461cbfed7439a4895907b135687f4c, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &950478267 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1751534778673143750, guid: d7d9fc7e30d8fdc43aed5a42f4c401ca, type: 3}
@@ -4416,21 +4344,9 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 3154382472083217704, guid: a9b90ec04a19ac4439ecc680a6743f81, type: 3}
-      propertyPath: JumpForce
-      value: 850
-      objectReference: {fileID: 0}
-    - target: {fileID: 3154382472083217704, guid: a9b90ec04a19ac4439ecc680a6743f81, type: 3}
       propertyPath: OtherPlayer
       value: 
       objectReference: {fileID: 6315003282884578151}
-    - target: {fileID: 4004505409434089425, guid: a9b90ec04a19ac4439ecc680a6743f81, type: 3}
-      propertyPath: DyingSpeed
-      value: 0.025
-      objectReference: {fileID: 0}
-    - target: {fileID: 6131238520060759312, guid: a9b90ec04a19ac4439ecc680a6743f81, type: 3}
-      propertyPath: m_LinearDrag
-      value: 3
-      objectReference: {fileID: 0}
     - target: {fileID: 6131238520060759314, guid: a9b90ec04a19ac4439ecc680a6743f81, type: 3}
       propertyPath: m_Name
       value: PlayerA
@@ -4486,7 +4402,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3154382472083217704, guid: a9b90ec04a19ac4439ecc680a6743f81, type: 3}
   m_PrefabInstance: {fileID: 1780136924011402551}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 655714359}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e3d6cc037aa674e41aa3bd3b465b028a, type: 3}
@@ -4573,26 +4489,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1087649927175620132, guid: ac34cc7f46800e5448cee77659bc6e39, type: 3}
-      propertyPath: DyingSpeed
-      value: 0.025
-      objectReference: {fileID: 0}
-    - target: {fileID: 4500539285478034828, guid: ac34cc7f46800e5448cee77659bc6e39, type: 3}
-      propertyPath: JumpForce
-      value: 850
-      objectReference: {fileID: 0}
     - target: {fileID: 4500539285478034828, guid: ac34cc7f46800e5448cee77659bc6e39, type: 3}
       propertyPath: OtherPlayer
       value: 
       objectReference: {fileID: 1780136924011402552}
-    - target: {fileID: 8177822102382727010, guid: ac34cc7f46800e5448cee77659bc6e39, type: 3}
-      propertyPath: m_LinearDrag
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 8177822102382727011, guid: ac34cc7f46800e5448cee77659bc6e39, type: 3}
-      propertyPath: m_DrawMode
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 8177822102382727014, guid: ac34cc7f46800e5448cee77659bc6e39, type: 3}
       propertyPath: m_Name
       value: PlayerB
@@ -4648,7 +4548,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4500539285478034828, guid: ac34cc7f46800e5448cee77659bc6e39, type: 3}
   m_PrefabInstance: {fileID: 6315003282884578150}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 917921391}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e3d6cc037aa674e41aa3bd3b465b028a, type: 3}

@@ -29,14 +29,14 @@ public class ColorMaster : MonoBehaviour
     {
         switch (colorType)
         {
-            case GameColorTypes.DarkBlue:
-                return GameColorTypes.Orange;
-            case GameColorTypes.Orange:
-                return GameColorTypes.DarkBlue;
-            case GameColorTypes.LightBlue:
-                return GameColorTypes.Beige;
-            case GameColorTypes.Beige:
-                return GameColorTypes.LightBlue;
+            case GameColorTypes.ColorA:
+                return GameColorTypes.ColorC;
+            case GameColorTypes.ColorC:
+                return GameColorTypes.ColorA;
+            case GameColorTypes.ColorD:
+                return GameColorTypes.ColorB;
+            case GameColorTypes.ColorB:
+                return GameColorTypes.ColorD;
             default:
                 return colorType;
         }
@@ -45,10 +45,10 @@ public class ColorMaster : MonoBehaviour
 
 public enum GameColorTypes
 {
-    DarkBlue,
-    Beige,
-    Orange,
-    LightBlue
+    ColorA,
+    ColorB,
+    ColorC,
+    ColorD
 }
 
 public class GameColor
@@ -82,21 +82,21 @@ public class GameColor
 
         switch (this.type)
         {
-            case GameColorTypes.DarkBlue:
+            case GameColorTypes.ColorA:
                 color = ColorMaster.Instance.ColorVector[0];
-                name = "DarkBlue";
+                name = "ColorA";
                 break;
-            case GameColorTypes.Beige:
+            case GameColorTypes.ColorB:
                 color = ColorMaster.Instance.ColorVector[1];
-                name = "Beige";
+                name = "ColorB";
                 break;
-            case GameColorTypes.Orange:
+            case GameColorTypes.ColorC:
                 color = ColorMaster.Instance.ColorVector[2];
-                name = "Orange";
+                name = "ColorC";
                 break;
-            case GameColorTypes.LightBlue:
+            case GameColorTypes.ColorD:
                 color = ColorMaster.Instance.ColorVector[3];
-                name = "LightBlue";
+                name = "ColorD";
                 break;
             default:
                 return;
