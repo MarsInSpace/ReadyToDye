@@ -69,7 +69,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 82287945
-  m_SortingLayer: 2
+  m_SortingLayer: 5
   m_SortingOrder: 3
   m_Sprite: {fileID: 21300000, guid: 7bdd40a20357dfd498cc060966d4b427, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 0}
@@ -151,7 +151,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 82287945
-  m_SortingLayer: 2
+  m_SortingLayer: 5
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 7bdd40a20357dfd498cc060966d4b427, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -178,6 +178,8 @@ GameObject:
   - component: {fileID: 8177822102382727008}
   - component: {fileID: 4500539285478034828}
   - component: {fileID: 1087649927175620132}
+  - component: {fileID: 917921397}
+  - component: {fileID: 917921392}
   m_Layer: 9
   m_Name: PlayerB Ball 1
   m_TagString: Player
@@ -239,13 +241,13 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 82287945
-  m_SortingLayer: 2
+  m_SortingLayer: 5
   m_SortingOrder: 2
   m_Sprite: {fileID: -2413806693520163455, guid: 6bded925513dc5040957e264561b01e3, type: 3}
   m_Color: {r: 0.8862745, g: 0.6509804, b: 0.3764706, a: 1}
   m_FlipX: 0
   m_FlipY: 0
-  m_DrawMode: 1
+  m_DrawMode: 0
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
@@ -265,7 +267,7 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 100
-  m_LinearDrag: 2
+  m_LinearDrag: 3
   m_AngularDrag: 0
   m_GravityScale: 1
   m_Material: {fileID: 0}
@@ -309,7 +311,8 @@ MonoBehaviour:
   CanChangeColor: 1
   Speed: 800
   MaxVelocityX: 6
-  JumpForce: 750
+  JumpForce: 850
+  SpaceKeyDown: 0
   OnGroundLayer:
     serializedVersion: 2
     m_Bits: 4032
@@ -328,4 +331,35 @@ MonoBehaviour:
   ColorChangeSprite: {fileID: 8416505422592242842}
   ActiveHalo: {fileID: 2958679444907223690}
   ColorChangeGlowFallOff: 0.07
-  DyingSpeed: 0.2
+  DyingSpeed: 0.025
+--- !u!95 &917921397
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8177822102382727014}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 5a461cbfed7439a4895907b135687f4c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &917921392
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8177822102382727014}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ddbd441fd7f23384db855e238bac75e4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
