@@ -20,28 +20,32 @@ public class PlayerAnimation : MonoBehaviour
 
         //Idle/breathing is standard
 
-        //JUMP
-        if(GetComponent<PlayerController>().Grounded && GetComponent<PlayerController>().SpaceKeyDown == false  && Input.GetKey(KeyCode.Space))
+        if(GetComponent<PlayerController>().Active == true)
         {
-            Anim.SetTrigger("jumping");
+            //JUMP
+            if (GetComponent<PlayerController>().Grounded && GetComponent<PlayerController>().SpaceKeyDown == false && Input.GetKey(KeyCode.Space))
+            {
+                Anim.SetTrigger("jumping");
+            }
+
+            //Walking
+            if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D))
+            {
+                Anim.SetBool("isRolling", true);
+            }
+            else
+            {
+                Anim.SetBool("isRolling", false);
+            }
+
+
+            //IN TELEPORT 
+            /*if (teleporterScript.justTP == false)
+            {
+                Anim.SetTrigger("teleporting");
+            }*/
         }
 
-        //Walking
-        if(Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D))
-        {
-            Anim.SetBool("isRolling", true);
-        }
-        else
-        {
-            Anim.SetBool("isRolling", false);
-        }
-
-
-        //IN TELEPORT 
-        /*if (teleporterScript.justTP == false)
-        {
-            Anim.SetTrigger("teleporting");
-        }*/
 
 
     }
