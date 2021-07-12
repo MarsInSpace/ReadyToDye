@@ -50,7 +50,10 @@ public class TurnWorld : MonoBehaviour
             return;
 
         foreach (PlayerController player in Players)
+        {
+            player.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezePositionY;
             player.Interacting = true;
+        }
 
         OrientationMaster.Instance.DisableTurning();
         Turning = true;
@@ -90,7 +93,10 @@ public class TurnWorld : MonoBehaviour
             Turning = false;
 
             foreach (PlayerController player in Players)
+            {
                 player.Interacting = false;
+                player.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.None;
+            }
 
             OrientationMaster.Instance.SetOrientationByAngle(MainCam.transform.rotation.eulerAngles.z);
 
