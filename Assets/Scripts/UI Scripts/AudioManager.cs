@@ -15,12 +15,22 @@ public class AudioManager : MonoBehaviour
             s.Source.clip = s.clip;
 
             s.Source.volume = s.Volume;
+            s.Source.loop = s.Loop;
         }
+    }
+
+    private void Start()
+    {
+        FindObjectOfType<AudioManager>().Play("Atmosphere");
     }
 
     public void Play (string name)
     {
         Sound s = Array.Find(Sounds, sound => sound.name == name);
+
+        if (s == null)
+            return;
+
         s.Source.Play();
     }
 
