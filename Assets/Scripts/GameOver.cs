@@ -7,8 +7,6 @@ public class GameOver : MonoBehaviour
     private float timeCounter = 0;
     private float GameOverTimeDelay = 2;
 
-
-
     private void OnTriggerStay2D(Collider2D collision)
     {
 
