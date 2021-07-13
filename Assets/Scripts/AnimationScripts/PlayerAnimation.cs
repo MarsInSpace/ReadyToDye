@@ -47,7 +47,6 @@ public class PlayerAnimation : MonoBehaviour
         }
 
 
-
     }
 
     //IN TELEPORT 
