@@ -7,6 +7,7 @@ public class Goal : MonoBehaviour
 {
  
     bool[] allPlayers = new bool[2]; //Array mit 2 Stellen, wenn beide Stellen true = gewonnen, wenn einer rausgeht ist eine Stelle wieder false
+    public bool PlayerInGoal;
 
     public bool WinningCondition = false;
 
@@ -16,12 +17,14 @@ public class Goal : MonoBehaviour
         if (collision.gameObject.name == "PlayerA")
         {
             allPlayers[0] = true;
+            PlayerInGoal = true;
             //Debug.Log("Player A true");
         }
 
         else if (collision.gameObject.name == "PlayerB")
         {
             allPlayers[1] = true;
+            PlayerInGoal = true;
             //Debug.Log("Player B true");
         }
         else return;
@@ -39,11 +42,13 @@ public class Goal : MonoBehaviour
         if (collision.gameObject.name == "PlayerA")
         {
             allPlayers[0] = false;
+            PlayerInGoal = false;
         }
 
         else if (collision.gameObject.name == "PlayerB")
         {
             allPlayers[1] = false;
+            PlayerInGoal = false;
         }
     }
 
