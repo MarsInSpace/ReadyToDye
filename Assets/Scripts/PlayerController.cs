@@ -67,8 +67,8 @@ public class PlayerController : MonoBehaviour
         MyRB = GetComponent<Rigidbody2D>();
         EffectsScript = GetComponent<PlayerEffects>();
 
-        MyColor = new GameColor(MyColorType);
         ChangeColor(MyColorType);
+        MyColor = new GameColor(MyColorType);
 
         this.gameObject.layer = LayerMask.NameToLayer(MyColor.Name);
 
