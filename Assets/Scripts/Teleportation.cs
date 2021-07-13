@@ -12,7 +12,7 @@ public class Teleportation : MonoBehaviour
 
     TeleporterAnimation AnimationScript;
 
-    private void Start()
+    private void Awake()
     {
         AnimationScript = GetComponent<TeleporterAnimation>();
     }
