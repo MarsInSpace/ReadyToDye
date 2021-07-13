@@ -21,7 +21,7 @@ public class GameOver : MonoBehaviour
 
             int counter = 0;
 
-            foreach(Collider2D col in PlayerOverlaps)
+            foreach (Collider2D col in PlayerOverlaps)
             {
                 if (col.gameObject.GetComponent<BGField>())
                     counter++;
@@ -48,6 +48,10 @@ public class GameOver : MonoBehaviour
                 GameManager.Instance.SetGameOver(false);
             }
         }
+        else if (collision.gameObject.tag.Equals("Player")
+            && collision.GetComponent<PlayerController>().MyColorType != this.gameObject.GetComponent<BGField>().FieldColor
+            && timeCounter > 0)
+            timeCounter = 0;
     }
 
     private void OnTriggerExit2D(Collider2D collision)
