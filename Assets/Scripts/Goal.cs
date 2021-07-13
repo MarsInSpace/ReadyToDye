@@ -5,8 +5,9 @@ using UnityEngine;
 
 public class Goal : MonoBehaviour
 {
- 
-    bool[] allPlayers = new bool[2]; //Array mit 2 Stellen, wenn beide Stellen true = gewonnen, wenn einer rausgeht ist eine Stelle wieder false
+
+    //bool[] allPlayers = new bool[2]; //Array mit 2 Stellen, wenn beide Stellen true = gewonnen, wenn einer rausgeht ist eine Stelle wieder false
+    int PlayersInGoal;
     public bool PlayerInGoal;
 
     public bool WinningCondition = false;
@@ -14,43 +15,26 @@ public class Goal : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.name == "PlayerA")
+
+        if(collision.tag.Equals("Player"))
         {
-            allPlayers[0] = true;
+            PlayersInGoal++;
             PlayerInGoal = true;
-            //Debug.Log("Player A true");
-        }
 
-        else if (collision.gameObject.name == "PlayerB")
-        {
-            allPlayers[1] = true;
-            PlayerInGoal = true;
-            //Debug.Log("Player B true");
+            if (PlayersInGoal == 2)
+            {
+                WinningCondition = true;
+            }
         }
-        else return;
-
-
-        if (allPlayers[0] && allPlayers[1])
-        {
-            WinningCondition = true;
-        }
-           
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.gameObject.name == "PlayerA")
+        if (collision.tag.Equals("Player"))
         {
-            allPlayers[0] = false;
-            PlayerInGoal = false;
+            PlayersInGoal--;
+            if(PlayersInGoal == 0)
+                PlayerInGoal = false;
         }
-
-        else if (collision.gameObject.name == "PlayerB")
-        {
-            allPlayers[1] = false;
-            PlayerInGoal = false;
-        }
-    }
-
-  
+    }  
 }
