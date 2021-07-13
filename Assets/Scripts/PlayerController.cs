@@ -72,7 +72,7 @@ public class PlayerController : MonoBehaviour
 
         this.gameObject.layer = LayerMask.NameToLayer(MyColor.Name);
 
-        FindObjectOfType<AudioManager>().Play("Atmosphere");
+        
 
 
         //FindObjectOfType<AudioManager>().Play("Intro");

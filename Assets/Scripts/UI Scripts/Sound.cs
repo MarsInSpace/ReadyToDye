@@ -8,8 +8,10 @@ public class Sound
 
     public AudioClip clip;
 
-    [Range (0f, 1f)]
+    [Range (-80f, 20f)]
     public float Volume;
+
+    public bool Loop;
 
     [HideInInspector]
     public AudioSource Source;
