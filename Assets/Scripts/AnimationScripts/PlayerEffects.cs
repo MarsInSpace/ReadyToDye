@@ -45,7 +45,7 @@ public class PlayerEffects : MonoBehaviour
                 ActiveHalo.color = Color.white;
                 SetActiveHalo(GetComponent<PlayerController>().Active);
                 GetComponent<SpriteRenderer>().color = new Color(GetComponent<SpriteRenderer>().color.r, GetComponent<SpriteRenderer>().color.g, GetComponent<SpriteRenderer>().color.b, 1);
-
+                FindObjectOfType<AudioManager>().Stop("Dying");
 
                 OldDeathTimer = 0;
                 NewDeathTimer = 0;
@@ -69,6 +69,7 @@ public class PlayerEffects : MonoBehaviour
             Dying = true;
             ActiveHalo.color = new Color(1f, 0.15f, 0.15f, 1f);
             SetActiveHalo(true);
+            FindObjectOfType<AudioManager>().Play("Dying");
         }
 
         NewDeathTimer = timer;

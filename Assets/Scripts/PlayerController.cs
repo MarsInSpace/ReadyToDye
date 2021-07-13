@@ -182,8 +182,6 @@ public class PlayerController : MonoBehaviour
             MyRB.AddForce(OrientationMaster.Instance.Up() * JumpForce, ForceMode2D.Impulse);
             SpaceKeyDown = true;
 
-            FindObjectOfType<AudioManager>().Play("Jump");
-
             //Debug.Log("Jumped");
         }
 

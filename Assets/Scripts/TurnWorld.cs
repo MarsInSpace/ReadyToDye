@@ -39,7 +39,12 @@ public class TurnWorld : MonoBehaviour
         if (!Turning && TriggerCoolDown > 0)
         {
             TriggerCoolDown -= Time.deltaTime;
+
+            if(TriggerCoolDown <= 0)
+                OrientationMaster.Instance.EnableTurning();
         }
+
+        Debug.Log("TriggerCoolDown = " + TriggerCoolDown);
     }
 
 
@@ -91,7 +96,6 @@ public class TurnWorld : MonoBehaviour
             MainCam.transform.rotation = TargetRotation;
             Physics2D.gravity = TargetGravity;
 
-            OrientationMaster.Instance.EnableTurning();
             Turning = false;
 
             foreach (PlayerController player in Players)

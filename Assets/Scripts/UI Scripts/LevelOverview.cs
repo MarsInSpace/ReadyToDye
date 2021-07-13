@@ -56,7 +56,7 @@ public class LevelOverview : MonoBehaviour
 
     public void LoadLevel1()
     {
-        SceneManager.LoadScene("MarScene");
+        SceneManager.LoadScene("Level1");
     }
 
     public void LoadLevel2()
