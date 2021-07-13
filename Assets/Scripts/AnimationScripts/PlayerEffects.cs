@@ -33,12 +33,12 @@ public class PlayerEffects : MonoBehaviour
 
         if (Dying)
         {
-            Debug.Log("LastTime = " + OldDeathTimer);
-            Debug.Log("NewTime" + NewDeathTimer);
+            //Debug.Log("LastTime = " + OldDeathTimer);
+            //Debug.Log("NewTime" + NewDeathTimer);
 
             if (NewDeathTimer == OldDeathTimer)
             {
-                Debug.Log("no longer dying");
+                //Debug.Log("no longer dying");
 
                 Dying = false;
 

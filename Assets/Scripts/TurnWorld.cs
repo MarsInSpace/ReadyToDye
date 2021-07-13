@@ -44,7 +44,7 @@ public class TurnWorld : MonoBehaviour
                 OrientationMaster.Instance.EnableTurning();
         }
 
-        Debug.Log("TriggerCoolDown = " + TriggerCoolDown);
+        //Debug.Log("TriggerCoolDown = " + TriggerCoolDown);
     }
 
 
