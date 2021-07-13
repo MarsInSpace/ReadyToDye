@@ -666,8 +666,8 @@ EdgeCollider2D:
   m_Offset: {x: 0, y: 0}
   m_EdgeRadius: 0
   m_Points:
-  - {x: -3.74, y: 2.57}
-  - {x: 3.71, y: 2.57}
+  - {x: -3.74, y: 2.6}
+  - {x: 3.71, y: 2.6}
   m_AdjacentStartPoint: {x: 0, y: 0}
   m_AdjacentEndPoint: {x: 0, y: 0}
   m_UseAdjacentStartPoint: 0
@@ -795,8 +795,8 @@ EdgeCollider2D:
   m_Offset: {x: 0, y: 0}
   m_EdgeRadius: 0
   m_Points:
-  - {x: -1.47, y: 2.62}
-  - {x: 1.43, y: 2.62}
+  - {x: -1.47, y: 2.6}
+  - {x: 1.43, y: 2.6}
   m_AdjacentStartPoint: {x: 0, y: 0}
   m_AdjacentEndPoint: {x: 0, y: 0}
   m_UseAdjacentStartPoint: 0
@@ -868,8 +868,8 @@ EdgeCollider2D:
   m_Offset: {x: 0, y: 0}
   m_EdgeRadius: 0
   m_Points:
-  - {x: -3.74, y: 2.57}
-  - {x: 0.94, y: 2.57}
+  - {x: -3.74, y: 2.6}
+  - {x: 0.94, y: 2.6}
   m_AdjacentStartPoint: {x: 0, y: 0}
   m_AdjacentEndPoint: {x: 0, y: 0}
   m_UseAdjacentStartPoint: 0
@@ -903,7 +903,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 359905029}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -7.16, y: -2.38, z: 0}
+  m_LocalPosition: {x: -7.16, y: -2.37, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1554264688}
@@ -1003,8 +1003,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ad56acf9d07dfd4cb6783203b38885d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  StartPosition: {x: -7.16, y: -2.38, z: 0}
-  PositionB: {x: 0.3, y: -2.38, z: 0}
+  StartPosition: {x: -7.16, y: -2.37, z: 0}
+  PositionB: {x: 0.4, y: -2.37, z: 0}
   Speed: 0.01
 --- !u!114 &359905034
 MonoBehaviour:
@@ -2009,7 +2009,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7108425132505684825, guid: 0d2f38032773ffc41b8dabf3f74c67dd, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -3.1
+      value: -2.8
       objectReference: {fileID: 0}
     - target: {fileID: 7108425132505684825, guid: 0d2f38032773ffc41b8dabf3f74c67dd, type: 3}
       propertyPath: m_LocalPosition.y
@@ -2120,8 +2120,8 @@ EdgeCollider2D:
   m_Offset: {x: 0, y: 0}
   m_EdgeRadius: 0
   m_Points:
-  - {x: -1.92, y: 2.62}
-  - {x: 2.02, y: 2.62}
+  - {x: -1.92, y: 2.6}
+  - {x: 2.02, y: 2.6}
   m_AdjacentStartPoint: {x: 0, y: 0}
   m_AdjacentEndPoint: {x: 0, y: 0}
   m_UseAdjacentStartPoint: 0
@@ -3857,7 +3857,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1401456127}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.23, y: 2.66, z: 0}
+  m_LocalPosition: {x: -0.23, y: 2.65, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1707976803}
@@ -3957,8 +3957,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ad56acf9d07dfd4cb6783203b38885d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  StartPosition: {x: -0.23, y: 2.66, z: 0}
-  PositionB: {x: 4.81, y: 2.66, z: 0}
+  StartPosition: {x: -0.23, y: 2.65, z: 0}
+  PositionB: {x: 4.83, y: 2.65, z: 0}
   Speed: 0.01
 --- !u!114 &1401456132
 MonoBehaviour:
