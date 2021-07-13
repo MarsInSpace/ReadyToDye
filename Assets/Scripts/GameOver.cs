@@ -7,6 +7,8 @@ public class GameOver : MonoBehaviour
     private float timeCounter = 0;
     private float GameOverTimeDelay = 2;
 
+    GameObject PlayerDying;
+
     private void OnTriggerStay2D(Collider2D collision)
     {
 
@@ -29,9 +31,9 @@ public class GameOver : MonoBehaviour
             }
 
             //Debug.Log("only one Overlap found");
-
-
             //.Log("DeathCollision");
+
+            PlayerDying = collision.gameObject;
 
             timeCounter += Time.deltaTime;
             //Debug.Log("timer = " + timeCounter);
@@ -46,15 +48,21 @@ public class GameOver : MonoBehaviour
                 GameManager.Instance.SetGameOver(false);
             }
         }
-        else if (collision.gameObject.tag.Equals("Player")
+        else if (collision.gameObject == PlayerDying
             && collision.GetComponent<PlayerController>().MyColorType != this.gameObject.GetComponent<BGField>().FieldColor
             && timeCounter > 0)
+        {
             timeCounter = 0;
+            PlayerDying = null;
+        }
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.tag.Equals("Player"))
+        {
             timeCounter = 0;
+            PlayerDying = null;
+        }
     }
 }

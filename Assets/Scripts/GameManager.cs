@@ -7,6 +7,9 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
 
+    [SerializeField] Canvas GameOverScreen;
+    [SerializeField] Canvas GameWonScreen;
+
     bool GameOver;
 
     private void Awake()
@@ -21,10 +24,17 @@ public class GameManager : MonoBehaviour
     {
         GameOver = true;
 
-        //TODO - initiate according behaviour
-        Debug.Log("Won = " + won);
+        Time.timeScale = 0f;
 
+        if (won)
+            GameWonScreen.gameObject.SetActive(true);
+        else
+            GameOverScreen.gameObject.SetActive(true);
+    }
+
+    private void OnDestroy()
+    {
         Physics2D.gravity = new Vector2(0, -9.81f);
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        Time.timeScale = 1f;
     }
 }
