@@ -261,6 +261,18 @@ public class PlayerController : MonoBehaviour
             {
                 continue;
             }
+            else if(collider.GetType() == typeof(EdgeCollider2D))
+            {
+                Debug.Log("Edgecollider");
+
+                PlatformEffector2D effector = collider.GetComponent<PlatformEffector2D>();
+
+                if(effector != null && effector.rotationalOffset % 180 != 0)
+                    continue;
+
+                GroundCheck = true;
+                Debug.Log(" is ground");
+            }
             else
             {
                 GroundCheck = true;
