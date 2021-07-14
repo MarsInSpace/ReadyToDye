@@ -2988,7 +2988,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 142837323}
         m_TargetAssemblyTypeName: WinScreen, Assembly-CSharp
-        m_MethodName: NextLevel
+        m_MethodName: LoadLevelOverview
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

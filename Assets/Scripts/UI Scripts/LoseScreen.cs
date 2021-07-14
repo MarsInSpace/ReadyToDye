@@ -5,6 +5,11 @@ using UnityEngine.SceneManagement;
 
 public class LoseScreen : MonoBehaviour
 {
+    private void Update()
+    {
+        if (Input.GetKey(KeyCode.Escape))
+            LoadMenu();
+    }
 
     public void LoadMenu()
     {
