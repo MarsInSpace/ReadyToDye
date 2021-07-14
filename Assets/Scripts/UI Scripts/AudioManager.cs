@@ -16,29 +16,29 @@ public class AudioManager : MonoBehaviour
         {
             s.Source = gameObject.AddComponent<AudioSource>();
             s.Source.clip = s.clip;
-            s.Source.name = s.name;
+            //s.Source.name = s.name;
 
-            if (s.Source.name == "Atmosphere")
+            if (s.name == "Atmosphere")
                 s.Source.outputAudioMixerGroup = Music;
 
             else
                 s.Source.outputAudioMixerGroup = SFX;
 
 
-
             s.Source.volume = s.Volume;
+            s.Source.playOnAwake = false;
             s.Source.loop = s.Loop;
         }
     }
 
     private void Start()
     {
-        FindObjectOfType<AudioManager>().Play("Atmosphere");
+        Play("Atmosphere");
     }
 
-    public void Play(string name)
+    public void Play(string sName)
     {
-        Sound s = Array.Find(Sounds, sound => sound.name == name);
+        Sound s = Array.Find(Sounds, sound => sound.name == sName);
 
         if (s == null)
             return;
@@ -46,9 +46,9 @@ public class AudioManager : MonoBehaviour
         s.Source.Play();
     }
 
-    public void Stop(string name)
+    public void Stop(string sName)
     {
-        Sound s = Array.Find(Sounds, sound => sound.name == name);
+        Sound s = Array.Find(Sounds, sound => sound.name == sName);
         s.Source.Stop();
     }
 }

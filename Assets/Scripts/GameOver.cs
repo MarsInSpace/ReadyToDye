@@ -45,6 +45,7 @@ public class GameOver : MonoBehaviour
             if (timeCounter > GameOverTimeDelay)
             {
                 timeCounter = 0;
+                FindObjectOfType<AudioManager>().Stop("Dying");
                 GameManager.Instance.SetGameOver(false);
             }
         }
