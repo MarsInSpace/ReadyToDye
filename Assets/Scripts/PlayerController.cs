@@ -71,11 +71,6 @@ public class PlayerController : MonoBehaviour
         MyColor = new GameColor(MyColorType);
 
         this.gameObject.layer = LayerMask.NameToLayer(MyColor.Name);
-
-        
-
-
-        //FindObjectOfType<AudioManager>().Play("Intro");
     }
 
 

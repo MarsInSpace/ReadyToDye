@@ -324,7 +324,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LevelOverviewUI: {fileID: 5604167794898534734}
-  SettingsMenuUI: {fileID: 0}
+  SettingsMenuUI: {fileID: 7452874533523077796}
   TutorialUI: {fileID: 5604167794460370841}
 --- !u!1 &5604167793724236002
 GameObject:
@@ -757,7 +757,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &5604167794460370844
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2188,5 +2188,10 @@ PrefabInstance:
 --- !u!224 &7452874533523077795 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 3639701020460032792, guid: 1bec5ba7cbc0f3d4daf560adfde2d26a, type: 3}
+  m_PrefabInstance: {fileID: 6192235280353139131}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &7452874533523077796 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3639701020460032799, guid: 1bec5ba7cbc0f3d4daf560adfde2d26a, type: 3}
   m_PrefabInstance: {fileID: 6192235280353139131}
   m_PrefabAsset: {fileID: 0}
