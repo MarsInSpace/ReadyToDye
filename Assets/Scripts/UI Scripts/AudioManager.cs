@@ -18,15 +18,15 @@ public class AudioManager : MonoBehaviour
             s.Source.clip = s.clip;
             //s.Source.name = s.name;
 
-            if (s.Source.name == "Atmosphere")
+            if (s.name == "Atmosphere")
                 s.Source.outputAudioMixerGroup = Music;
 
             else
                 s.Source.outputAudioMixerGroup = SFX;
 
 
-
             s.Source.volume = s.Volume;
+            s.Source.playOnAwake = false;
             s.Source.loop = s.Loop;
         }
     }
