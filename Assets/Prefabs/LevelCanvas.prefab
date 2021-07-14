@@ -1338,7 +1338,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PauseMenuUI: {fileID: 8266863242006000176}
-  SettingsMenuUI: {fileID: 0}
+  SettingsMenuUI: {fileID: 3317470002648114638}
   TutorialUI: {fileID: 8266863243092392784}
 --- !u!1 &8266863243420228036
 GameObject:
@@ -1903,6 +1903,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1bec5ba7cbc0f3d4daf560adfde2d26a, type: 3}
+--- !u!1 &3317470002648114638 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3639701020460032799, guid: 1bec5ba7cbc0f3d4daf560adfde2d26a, type: 3}
+  m_PrefabInstance: {fileID: 2056128178732091089}
+  m_PrefabAsset: {fileID: 0}
 --- !u!224 &3317470002648114633 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 3639701020460032792, guid: 1bec5ba7cbc0f3d4daf560adfde2d26a, type: 3}

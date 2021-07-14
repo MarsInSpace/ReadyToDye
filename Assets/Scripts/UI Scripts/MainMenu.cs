@@ -45,7 +45,6 @@ public class MainMenu : MonoBehaviour
 
     public void OpenTutorial()
     {
-        //MainMenuUI.SetActive(false); (brauchen wir nicht wenn tutorial ui opaque ist)
         TutorialUI.SetActive(true);
     }
 
