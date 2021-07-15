@@ -10,6 +10,7 @@ public class PauseMenu : MonoBehaviour
     public GameObject PauseMenuUI;
     public GameObject SettingsMenuUI;
     public GameObject TutorialUI;
+    public GameObject CreditUI;
 
 
     void Start()
@@ -39,6 +40,7 @@ public class PauseMenu : MonoBehaviour
         PauseMenuUI.SetActive(true);
         SettingsMenuUI.SetActive(false);
         TutorialUI.SetActive(false);
+        CreditUI.SetActive(false);
         Time.timeScale = 0f;
         GamePaused = true;
     }
@@ -62,11 +64,17 @@ public class PauseMenu : MonoBehaviour
         SettingsMenuUI.SetActive(true);
         PauseMenuUI.SetActive(false);
         TutorialUI.SetActive(false);
+        CreditUI.SetActive(false);
     }
 
     public void OpenTutorial()
     {
         TutorialUI.SetActive(true);
+    }
+
+    public void OpenCredits()
+    {
+        CreditUI.SetActive(true);
     }
 
     public void LoadMenu()
