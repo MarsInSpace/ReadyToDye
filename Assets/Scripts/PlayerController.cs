@@ -258,7 +258,7 @@ public class PlayerController : MonoBehaviour
             }
             else if(collider.GetType() == typeof(EdgeCollider2D))
             {
-                Debug.Log("Edgecollider");
+                //Debug.Log("Edgecollider");
 
                 PlatformEffector2D effector = collider.GetComponent<PlatformEffector2D>();
 
@@ -266,7 +266,7 @@ public class PlayerController : MonoBehaviour
                     continue;
 
                 GroundCheck = true;
-                Debug.Log(" is ground");
+                //Debug.Log(" is ground");
             }
             else
             {
